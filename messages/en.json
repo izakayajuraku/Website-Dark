@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "menu": "Menu",
+    "events": "Events",
+    "blog": "Blog",
+    "gallery": "Gallery",
+    "about": "About",
+    "community": "Community",
+    "giftCards": "Gift Cards",
+    "rewards": "Rewards",
+    "reserve": "Reserve",
+    "reserveFull": "Reserve a Table",
+    "orderDirect": "Order Direct"
+  },
+  "home": {
+    "pretitle": "JURAKU",
+    "tagline": "Tokyo-inspired comfort food with NYC energy.",
+    "subtitle": "A Japanese gastropub on the Lower East Side serving karaage, yakitori, and sake, Tuesday through Sunday.",
+    "menuCta": "View Menu →",
+    "orderCta": "Order Direct (no fees) →",
+    "reserveCta": "Reserve a Table →",
+    "upcomingEvents": "Upcoming Events",
+    "viewFullCalendar": "View Full Calendar →",
+    "latestFromBlog": "Latest From the Blog",
+    "viewAllArticles": "View All Articles →"
+  },
+  "footer": {
+    "ourHome": "Our Home",
+    "getDirections": "Get Directions →",
+    "followTheGoodTimes": "Follow the Good Times",
+    "writeAReview": "Write a Review →",
+    "orderAndRewards": "Order & Rewards",
+    "orderDirectNoFees": "Order Direct (no fees)",
+    "faq": "FAQ",
+    "community": "Community & Collaborations"
+  },
+  "language": {
+    "switchTo": "日本語"
+  },
+  "events": {
+    "pretitle": "イベント",
+    "title": "Events",
+    "followFor": "Follow",
+    "followSuffix": "for the latest on nights, specials, and drops.",
+    "everyWeek": "Every Week",
+    "pastEvents": "Past Events",
+    "rsvp": "RSVP →",
+    "nothingScheduled": "No one-off events on the calendar right now — but scroll down, we've got something every week."
+  },
+  "blog": {
+    "pretitle": "ブログ",
+    "title": "Blog",
+    "subtitle": "Stories from behind the bar: cocktails, ramen, Japanese culture, and life on the Lower East Side.",
+    "newsletterHeading": "Get the Juraku Newsletter",
+    "newsletterSubtitle": "A monthly email with new drink drops, upcoming events, and stories from the bar.",
+    "newsletterCta": "Sign Up →",
+    "backToBlog": "← Back to Blog"
+  },
+  "gallery": {
+    "pretitle": "ギャラリー",
+    "title": "Gallery",
+    "tagPrefix": "Good nights, good people. Tag",
+    "tagSuffix": "and we might feature you here."
+  },
+  "about": {
+    "pretitle": "私たち",
+    "title": "About Juraku"
+  },
+  "faq": {
+    "title": "FAQ",
+    "subtitle": "Reservations, ordering, allergies, private events, and more."
+  },
+  "cookies": {
+    "message": "We use cookies to improve your experience on this site.",
+    "accept": "Got it"
+  }
+}

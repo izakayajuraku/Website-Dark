@@ -1,0 +1,209 @@
+@import "tailwindcss";
+
+:root {
+  /* Dark concept: warm near-black surfaces, cream ink, neon accents.
+     "paper" now means "page surface" (dark) and "ink" means "primary
+     text/outline" (light) — the names are kept so every component that
+     already reads bg-paper / text-ink / border-ink flips for free. */
+  --paper: #16100c;
+  --paper-dim: #1e1611;
+  --card: #241a14;
+  --void: #0b0807;
+  --ink: #f3e6d2;
+  --red: #e04a37;
+  --red-dark: #b5342a;
+  --gold: #dcb15a;
+  /* True electric blue, matching the real neon "izakaya" sign in the shop
+     window — official brand colors are red / white / blue. */
+  --neon: #3d9bf0;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-dim: var(--paper-dim);
+  --color-card: var(--card);
+  --color-void: var(--void);
+  --color-ink: var(--ink);
+  --color-red: var(--red);
+  --color-red-dark: var(--red-dark);
+  --color-gold: var(--gold);
+  --color-neon: var(--neon);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-jp: var(--font-jp);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body), system-ui, sans-serif;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(243, 230, 210, 0.06) 1px, transparent 0);
+  background-size: 18px 18px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+.marquee-track {
+  animation: marquee 65s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display), sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.font-jp {
+  font-family: var(--font-jp), sans-serif;
+}
+
+.ink-outline {
+  -webkit-text-stroke: 1.5px var(--ink);
+}
+
+.prose-juraku {
+  color: var(--ink);
+  line-height: 1.75;
+}
+
+.prose-juraku p {
+  margin-top: 1.1em;
+  margin-bottom: 1.1em;
+}
+
+.prose-juraku h2 {
+  font-family: var(--font-display), sans-serif;
+  letter-spacing: 0.02em;
+  font-size: 1.6rem;
+  margin-top: 2em;
+  margin-bottom: 0.6em;
+}
+
+.prose-juraku h3 {
+  font-family: var(--font-display), sans-serif;
+  letter-spacing: 0.02em;
+  font-size: 1.3rem;
+  margin-top: 1.6em;
+  margin-bottom: 0.5em;
+}
+
+.prose-juraku ul,
+.prose-juraku ol {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-left: 1.4em;
+}
+
+.prose-juraku li {
+  margin-top: 0.35em;
+}
+
+.prose-juraku ul li {
+  list-style: disc;
+}
+
+.prose-juraku strong {
+  font-weight: 700;
+}
+
+.prose-juraku a {
+  color: var(--red);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Softer, layered elevation for content cards — depth without the flat
+   comic-shadow look, reserved for the hand-illustrated scroll tiles. */
+.card-elevated {
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.3),
+    0 8px 24px -6px rgba(0, 0, 0, 0.55);
+  transition:
+    transform 300ms ease,
+    box-shadow 300ms ease;
+}
+
+.card-elevated:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.4),
+    0 0 28px -4px rgba(224, 74, 55, 0.35),
+    0 16px 36px -10px rgba(0, 0, 0, 0.6);
+}
+
+/* Neon text/border glow utilities for the dark concept's sign-lit feel */
+.neon-text {
+  color: var(--neon);
+  text-shadow:
+    0 0 6px rgba(61, 155, 240, 0.75),
+    0 0 18px rgba(61, 155, 240, 0.4);
+}
+
+.neon-red-text {
+  color: var(--red);
+  text-shadow:
+    0 0 8px rgba(224, 74, 55, 0.65),
+    0 0 22px rgba(224, 74, 55, 0.35);
+}
+
+.glow-border {
+  box-shadow:
+    0 0 0 2px var(--ink),
+    0 0 16px -2px rgba(61, 155, 240, 0.35);
+}
+
+/* Manga screentone dot texture — layer over photos/panels for that
+   halftone-print grain instead of a flat dark tint. */
+.screentone::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    circle,
+    rgba(243, 230, 210, 0.55) 1px,
+    transparent 1.3px
+  );
+  background-size: 6px 6px;
+  mix-blend-mode: overlay;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Hard comic-panel offset shadow, no blur — the "manga panel border" look
+   used throughout the light theme's popups, pushed further here. */
+.manga-panel {
+  border: 3px solid var(--ink);
+  box-shadow: 8px 8px 0 0 var(--void);
+}
+
+.manga-panel-red {
+  border: 3px solid var(--ink);
+  box-shadow: 8px 8px 0 0 var(--red);
+}
+
+.text-balance {
+  text-wrap: balance;
+}

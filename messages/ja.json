@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "menu": "メニュー",
+    "events": "イベント",
+    "blog": "ブログ",
+    "gallery": "ギャラリー",
+    "about": "私たちについて",
+    "community": "コミュニティ",
+    "giftCards": "ギフトカード",
+    "rewards": "特典プログラム",
+    "reserve": "予約",
+    "reserveFull": "予約する",
+    "orderDirect": "注文する"
+  },
+  "home": {
+    "pretitle": "JURAKU",
+    "tagline": "東京の味を、NYCの熱気で。",
+    "subtitle": "ニューヨーク・ロウアーイーストサイドの居酒屋。からあげや焼き鳥、日本酒を火曜から日曜までお楽しみいただけます。",
+    "menuCta": "メニューを見る →",
+    "orderCta": "オンライン注文（手数料なし）→",
+    "reserveCta": "テーブルを予約する →",
+    "upcomingEvents": "近日開催イベント",
+    "viewFullCalendar": "カレンダーを見る →",
+    "latestFromBlog": "最新ブログ",
+    "viewAllArticles": "記事一覧を見る →"
+  },
+  "footer": {
+    "ourHome": "お店の場所",
+    "getDirections": "アクセス・地図 →",
+    "followTheGoodTimes": "楽しい時間をフォロー",
+    "writeAReview": "レビューを書く →",
+    "orderAndRewards": "注文・特典",
+    "orderDirectNoFees": "オンライン注文（手数料なし）",
+    "faq": "よくある質問",
+    "community": "コミュニティ＆コラボレーション"
+  },
+  "language": {
+    "switchTo": "English"
+  },
+  "events": {
+    "pretitle": "イベント",
+    "title": "イベント",
+    "followFor": "最新情報は",
+    "followSuffix": "をフォロー！",
+    "everyWeek": "毎週開催",
+    "pastEvents": "過去のイベント",
+    "rsvp": "参加登録 →",
+    "nothingScheduled": "単発イベントの予定は今のところありません。でも下にスクロールすると、毎週恒例のイベントがあります。"
+  },
+  "blog": {
+    "pretitle": "ブログ",
+    "title": "ブログ",
+    "subtitle": "カクテル、ラーメン、日本文化、ロウアー・イーストサイドでの日々。バーの舞台裏からお届けするストーリー。",
+    "newsletterHeading": "ジュラクのニュースレターに登録",
+    "newsletterSubtitle": "新しいドリンクの情報やイベント、バーでのエピソードを毎月お届けします。",
+    "newsletterCta": "登録する →",
+    "backToBlog": "← ブログ一覧へ戻る"
+  },
+  "gallery": {
+    "pretitle": "ギャラリー",
+    "title": "ギャラリー",
+    "tagPrefix": "楽しい夜、素敵な仲間たち。",
+    "tagSuffix": "をタグ付けしたら、ここで紹介されるかも！"
+  },
+  "about": {
+    "pretitle": "私たち",
+    "title": "ジュラクについて"
+  },
+  "faq": {
+    "title": "よくある質問",
+    "subtitle": "ご予約、ご注文方法、アレルギー、貸切イベントなど。"
+  },
+  "cookies": {
+    "message": "当サイトでは、快適にご利用いただくためクッキーを使用しています。",
+    "accept": "了解"
+  }
+}
