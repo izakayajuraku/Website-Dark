@@ -42,12 +42,17 @@ export default async function CollaborationsPage({
     <>
       <Header />
       <main className="flex-1">
-        <section className="border-b-2 border-ink/80 bg-paper-dim/50">
-          <div className="mx-auto max-w-3xl px-4 py-14 text-center sm:px-6">
-            <p className="font-jp text-sm tracking-widest text-red">
+        <section className="relative overflow-hidden border-b-[3px] border-ink bg-void">
+          <div aria-hidden className="screentone absolute inset-0" />
+          <div
+            aria-hidden
+            className="absolute inset-0 bg-gradient-to-b from-void via-void/95 to-void"
+          />
+          <div className="relative mx-auto max-w-3xl px-4 py-16 text-center sm:px-6 sm:py-20">
+            <p className="font-jp text-sm tracking-widest neon-text">
               {isJa ? "コミュニティ" : "COMMUNITY"}
             </p>
-            <h1 className="mt-2 font-display text-5xl tracking-wide sm:text-6xl">
+            <h1 className="mt-2 font-display text-5xl tracking-wide text-ink sm:text-6xl">
               {isJa ? "コミュニティ＆コラボレーション" : "Community & Collaborations"}
             </h1>
             <p className="mx-auto mt-4 max-w-xl text-ink/80">
@@ -60,7 +65,7 @@ export default async function CollaborationsPage({
 
         <section className="mx-auto max-w-3xl px-4 py-14 sm:px-6">
           <Reveal>
-            <div className="rounded-lg border-2 border-ink bg-card p-6 shadow-[6px_6px_0_0_var(--ink)] sm:p-10">
+            <div className="manga-panel rounded-lg bg-card p-6 sm:p-10">
               <h2 className="font-display text-3xl tracking-wide">
                 {note.heading}
               </h2>
@@ -96,7 +101,14 @@ export default async function CollaborationsPage({
                       />
                     </div>
                   ) : (
-                    <div className="screentone relative h-16 w-full bg-void" />
+                    <div className="screentone relative flex h-24 w-full items-center justify-center overflow-hidden bg-void">
+                      <span
+                        aria-hidden
+                        className="select-none font-display text-7xl tracking-wide text-ink/10"
+                      >
+                        {entry.name.charAt(0)}
+                      </span>
+                    </div>
                   )}
                   <div className="flex flex-1 flex-col p-6">
                     <span className="inline-block w-fit rounded-full border border-red/40 bg-red/10 px-3 py-1 font-display text-xs tracking-wide text-red">

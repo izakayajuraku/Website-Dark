@@ -30,9 +30,9 @@ export const communityEntries: CommunityEntry[] = [
     categoryLabel: "Athlete We Sponsor",
     categoryLabelJa: "スポンサー選手",
     blurb:
-      "A three-time, two-division world champion boxer from Kagoshima, Japan — a two-time WBO Women's Junior Bantamweight World Champion and former IBF Women's Bantamweight World Champion. She trains at Gleason's Gym in Brooklyn, and we're proud to be one of her sponsors as she chases her next title. Off the clock, she's simply Miyo — a regular and a friend.",
+      "A three-time, two-division world champion boxer from Kagoshima, Japan. She's a two-time WBO Women's Junior Bantamweight World Champion and former IBF Women's Bantamweight World Champion, and she trains at Gleason's Gym in Brooklyn. We're proud to be one of her sponsors as she chases her next title. Off the clock, she's simply Miyo, a regular and a friend.",
     blurbJa:
-      "鹿児島県出身の吉田実代（ミヨ）は、三階級制覇を達成した世界チャンピオンボクサー。WBO女子ジュニアバンタム級王座を二度獲得し、IBF女子バンタム級王者にも輝きました。ブルックリンのグリーソンズ・ジムで練習を積む彼女の、スポンサーの一つを務められることを誇りに思っています。お店では、ただの「ミヨ」— 常連であり、友人です。",
+      "鹿児島県出身の吉田実代（ミヨ）は、三階級制覇を達成した世界チャンピオンボクサー。WBO女子ジュニアバンタム級王座を二度獲得し、IBF女子バンタム級王者にも輝きました。ブルックリンのグリーソンズ・ジムで練習を積む彼女の、スポンサーの一つを務められることを誇りに思っています。お店では、ただの「ミヨ」。常連であり、友人です。",
     instagram: "https://www.instagram.com/miyo_yoshida_/",
     internalHref: "/blog/meet-miyo-yoshida-world-champion",
     internalLabel: "Read her story on our blog",
@@ -64,7 +64,7 @@ export const communityEntries: CommunityEntry[] = [
     categoryLabel: "Festival We Sponsor",
     categoryLabelJa: "スポンサーフェスティバル",
     blurb:
-      "An annual hip-hop culture festival in Manhattan's Chinatown — breaking battles, graffiti murals, DJs, and MCs celebrating the deep connection between Asian heritage and hip-hop. Organized by Ken Ji with fiscal sponsorship from TEN TEN NYC, Juraku was an early sponsor during the festival's inaugural year.",
+      "An annual hip-hop culture festival in Manhattan's Chinatown, with breaking battles, graffiti murals, DJs, and MCs celebrating the deep connection between Asian heritage and hip-hop. Organized by Ken Ji with fiscal sponsorship from TEN TEN NYC, Juraku was an early sponsor during the festival's inaugural year.",
     blurbJa:
       "マンハッタン・チャイナタウンで開催される、ヒップホップ文化の祭典。ブレイキンバトル、グラフィティ、DJ、MCを通じて、アジアの文化的ルーツとヒップホップの深いつながりを祝います。主催はKen Ji氏、TEN TEN NYCによる財政支援のもと開催されており、ジュラクは第一回開催時からの初期スポンサーです。",
     link: "https://www.instagram.com/showdown.chinatown/",
@@ -78,7 +78,7 @@ export const communityEntries: CommunityEntry[] = [
     categoryLabel: "Artist Collaboration",
     categoryLabelJa: "アーティストコラボレーション",
     blurb:
-      "A NYC-based singer-songwriter of Japanese and Irish descent, known by her stage name ChiChi. A longtime friend and regular, she has a dedicated wall at Juraku — complete with a signed poster and guitar — and two cocktails on our menu created in her honor: Hidari Chichi and Migi Chichi.",
+      "A NYC-based singer-songwriter of Japanese and Irish descent, known by her stage name ChiChi. A longtime friend and regular, she has a dedicated wall at Juraku, complete with a signed poster and guitar, and two cocktails on our menu created in her honor: Hidari Chichi and Migi Chichi.",
     blurbJa:
       "日本とアイルランドの血を引く、ニューヨーク在住のシンガーソングライター。ステージネーム「ChiChi」として活動しています。長年の常連であり友人でもある彼女のために、ジュラク店内にはサイン入りポスターとギターを飾った専用ウォールがあり、メニューには彼女に捧げた二つのカクテル「左乳」と「右乳」があります。",
     link: "https://www.instagram.com/hot4chichi/",
@@ -91,12 +91,12 @@ export const communityEntries: CommunityEntry[] = [
     slug: "abigail-tan",
     name: "Abigail Tan",
     category: "collab",
-    categoryLabel: "Our Illustrator",
-    categoryLabelJa: "専属イラストレーター",
+    categoryLabel: "Our Go-To Artist",
+    categoryLabelJa: "専属アーティスト",
     blurb:
-      "Our go-to illustrator for 5+ years and counting. Abigail has created the sticker art, character designs, and illustrations across the Juraku brand — including Momochan and the samurai and yokai series you'll see throughout the site.",
+      "Our go-to artist for commission work for 5+ years and counting. Every piece of illustration you see across the Juraku brand, from Momochan to the sticker art to the samurai and yokai series, started as a commission with Abigail.",
     blurbJa:
-      "5年以上にわたり、ジュラクのイラストを手がけてきたイラストレーター。モモちゃんをはじめ、サイト内の侍・妖怪シリーズなど、ジュラクブランドのステッカーアートやキャラクターデザインの数々は、すべて彼女の作品です。",
+      "5年以上にわたり、コミッション作品を依頼し続けているジュラクの専属アーティスト。モモちゃんをはじめ、ステッカーアート、侍・妖怪シリーズなど、ジュラクブランドのイラストはすべて彼女に依頼して生まれたものです。",
     link: "https://www.instagram.com/biillustrationnn/",
     linkLabel: "@biillustrationnn",
     photo: "/images/community-abigail-art.png",
