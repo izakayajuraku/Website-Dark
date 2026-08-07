@@ -18,7 +18,7 @@ export function RotatingTagline({ lines }: { lines: string[] }) {
         <p
           key={line}
           aria-hidden={i !== active}
-          className={`absolute inset-0 flex items-center gap-2 font-display text-sm tracking-wide text-red transition-all duration-500 ${
+          className={`absolute inset-0 flex items-center gap-2 font-display text-sm tracking-wide text-neon transition-all duration-500 ${
             i === active
               ? "translate-y-0 opacity-100"
               : "pointer-events-none -translate-y-1 opacity-0"

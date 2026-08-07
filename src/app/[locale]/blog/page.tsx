@@ -56,7 +56,7 @@ export default async function BlogIndexPage({
       <main className="flex-1">
         <section className="border-b-2 border-ink/80 bg-paper-dim/50">
           <div className="mx-auto max-w-3xl px-4 py-14 text-center sm:px-6">
-            <p className="font-jp text-sm tracking-widest text-red">
+            <p className="font-jp text-sm tracking-widest text-neon">
               {t("blog.pretitle")}
             </p>
             <h1 className="mt-2 font-display text-5xl tracking-wide sm:text-6xl">

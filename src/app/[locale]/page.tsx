@@ -47,30 +47,13 @@ function HomeContent() {
           />
           <div aria-hidden className="screentone absolute inset-0" />
 
-          {/* Hours — a real, small floating card, not a wall of text */}
-          <div className="manga-panel absolute right-3 top-20 hidden max-w-[200px] rounded bg-void/80 p-3 text-xs text-ink backdrop-blur sm:right-6 sm:top-28 sm:block">
-            <p className="font-display text-sm tracking-wide text-red neon-red-text">
-              {locale === "ja" ? "営業時間" : "Open Late"}
-            </p>
-            <ul className="mt-1.5 space-y-0.5">
-              {SITE.hours.map((h) => (
-                <li key={h.days} className="flex justify-between gap-3">
-                  <span className="text-ink/70">
-                    {locale === "ja" ? h.daysJa : h.days}
-                  </span>
-                  <span>{locale === "ja" ? h.timeJa : h.time}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
           <div className="relative mx-auto flex min-h-[560px] max-w-6xl items-end px-4 pb-10 pt-24 sm:px-6 sm:pb-14 sm:pt-32 md:min-h-[640px]">
             <Reveal className="max-w-xl">
               <div className="flex items-center gap-3">
-                <p className="font-jp text-sm tracking-widest text-red neon-red-text">
+                <p className="font-jp text-sm tracking-widest text-neon neon-red-text">
                   {t("home.pretitle")}
                 </p>
-                <span className="relative rounded-full border-2 border-ink bg-ink px-3 py-1 font-display text-xs tracking-wide text-void">
+                <span className="relative rounded-full border-2 border-ink bg-ink px-3 py-1 font-display text-xs tracking-wide text-void shadow-[0_0_14px_-2px_rgba(188,26,32,0.6)]">
                   乾杯！Kanpai!
                   <span
                     aria-hidden
@@ -118,18 +101,6 @@ function HomeContent() {
               </div>
             </Reveal>
           </div>
-
-          {/* Momochan — a brand character accent now, not the hero visual */}
-          <div className="pointer-events-none absolute bottom-4 right-3 w-16 drop-shadow-[3px_3px_0_rgba(0,0,0,0.5)] sm:right-6 sm:w-24">
-            <Image
-              src="/images/momochan-hero.png"
-              alt=""
-              aria-hidden
-              width={900}
-              height={636}
-              className="w-full"
-            />
-          </div>
         </section>
 
         <Marquee
@@ -170,7 +141,7 @@ function HomeContent() {
                 </h2>
                 <Link
                   href="/events"
-                  className="font-display text-sm tracking-wide text-red hover:underline"
+                  className="font-display text-sm tracking-wide text-neon hover:underline"
                 >
                   {t("home.viewFullCalendar")}
                 </Link>
@@ -187,7 +158,7 @@ function HomeContent() {
                     <p className="font-display text-xl tracking-wide">
                       {locale === "ja" ? event.titleJa : event.title}
                     </p>
-                    <p className="mt-1 text-sm font-semibold text-red">
+                    <p className="mt-1 text-sm font-semibold text-neon">
                       {locale === "ja" ? event.dateJa : event.date}
                     </p>
                     <p className="mt-2 text-sm leading-snug text-ink/70">
@@ -212,7 +183,7 @@ function HomeContent() {
               </h2>
               <Link
                 href="/blog"
-                className="font-display text-sm tracking-wide text-red hover:underline"
+                className="font-display text-sm tracking-wide text-neon hover:underline"
               >
                 {t("home.viewAllArticles")}
               </Link>

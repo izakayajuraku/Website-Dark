@@ -29,7 +29,7 @@ function TileContents({
       <span aria-hidden className="block h-1.5 bg-gold/70" />
       <div className="flex flex-1 flex-col items-center bg-card px-4 pb-5 pt-6 text-center">
         <span className="font-jp text-xs text-ink/60">{jp}</span>
-        <span className="mt-1 font-display text-2xl tracking-wide text-ink group-hover:text-red">
+        <span className="mt-1 font-display text-2xl tracking-wide text-ink group-hover:text-neon">
           {label}
         </span>
         <span className="mt-2 text-xs leading-snug text-ink/70">{blurb}</span>

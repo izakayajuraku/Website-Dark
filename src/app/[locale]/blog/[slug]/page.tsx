@@ -65,7 +65,7 @@ export default async function BlogPostPage({
         <article className="mx-auto max-w-2xl px-4 py-14 sm:px-6">
           <Link
             href="/blog"
-            className="font-display text-sm tracking-wide text-red hover:underline"
+            className="font-display text-sm tracking-wide text-neon hover:underline"
           >
             {t("blog.backToBlog")}
           </Link>

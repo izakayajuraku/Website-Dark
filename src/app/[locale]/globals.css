@@ -1,24 +1,36 @@
 @import "tailwindcss";
 
 :root {
-  /* Dark concept: warm near-black surfaces, cream ink, neon accents.
-     "paper" now means "page surface" (dark) and "ink" means "primary
-     text/outline" (light) — the names are kept so every component that
-     already reads bg-paper / text-ink / border-ink flips for free. */
-  --paper: #16100c;
-  --paper-dim: #1e1611;
-  --card: #241a14;
-  --void: #0b0807;
-  --ink: #f3e6d2;
-  /* Primary accent is the logo's actual navy blue, sampled from the real
-     icon file (#0f1531, hue 229) and lifted in lightness so it reads on a
-     dark page — same hue family as the real mark, not a generic sky blue.
-     The `--red` variable name is kept so every bg-red/text-red/border-red
-     utility flips for free; it no longer renders red. */
-  --red: #5166cc;
-  --red-dark: #2b3a82;
+  /* Dark concept, tuned for actual readability (checked against WCAG
+     contrast, not eyeballed): near-black-on-near-white was measuring
+     15:1+, which reads as glare/eye strain rather than "high contrast."
+     Surfaces are a warm charcoal rather than true black, and ink is
+     softened slightly — settles body text around 11-13:1, still very
+     legible, without the halation effect.
+     "paper" = page surface (dark), "ink" = primary text/outline (light) —
+     the names are kept so bg-paper / text-ink / border-ink flip for free. */
+  --paper: #241c15;
+  --paper-dim: #2d2319;
+  --card: #332820;
+  --void: #171310;
+  --ink: #e9dfd0;
+  /* Two blues, not one: --red stays a deeper, richer blue for FILLS
+     (buttons, borders) where cream/void text sits on top of it. --neon is
+     a lighter tint of the same hue (sampled from the real logo icon,
+     #0f1531, hue 229) reserved for blue TEXT rendered directly on the dark
+     page — the deep fill blue measured under 4:1 contrast as text, which
+     fails WCAG AA and was genuinely hard to read. The `--red` name is kept
+     so bg-red/border-red utilities flip for free; it no longer renders red. */
+  --red: #4257bd;
+  --red-dark: #2c3c8e;
   --gold: #dcb15a;
-  --neon: #677ee9;
+  --neon: #8494e0;
+  /* The real second tube color from the storefront's neon sign (blue
+     "izakaya" + red "JURAKU"), sampled from the actual logo wordmark
+     (#c22026). Reserved for decorative glow/shadow accents only — borders,
+     hard shadows, glow rings — never for text, since it reads as too warm
+     and low-contrast as small type on this dark palette. */
+  --sign-red: #bc1a20;
 }
 
 @theme inline {
@@ -31,6 +43,7 @@
   --color-red-dark: var(--red-dark);
   --color-gold: var(--gold);
   --color-neon: var(--neon);
+  --color-sign-red: var(--sign-red);
   --font-display: var(--font-display);
   --font-body: var(--font-body);
   --font-jp: var(--font-jp);
@@ -45,7 +58,7 @@ body {
   color: var(--ink);
   font-family: var(--font-body), system-ui, sans-serif;
   background-image:
-    radial-gradient(circle at 1px 1px, rgba(243, 230, 210, 0.06) 1px, transparent 0);
+    radial-gradient(circle at 1px 1px, rgba(233, 223, 208, 0.045) 1px, transparent 0);
   background-size: 18px 18px;
 }
 
@@ -153,7 +166,7 @@ body {
   transform: translateY(-3px);
   box-shadow:
     0 2px 6px rgba(0, 0, 0, 0.4),
-    0 0 28px -4px rgba(81, 102, 204, 0.4),
+    0 0 28px -4px rgba(66, 87, 189, 0.4),
     0 16px 36px -10px rgba(0, 0, 0, 0.6);
 }
 
@@ -161,21 +174,21 @@ body {
 .neon-text {
   color: var(--neon);
   text-shadow:
-    0 0 6px rgba(103, 126, 233, 0.75),
-    0 0 18px rgba(103, 126, 233, 0.4);
+    0 0 6px rgba(132, 148, 224, 0.75),
+    0 0 18px rgba(132, 148, 224, 0.4);
 }
 
 .neon-red-text {
-  color: var(--red);
+  color: var(--neon);
   text-shadow:
-    0 0 8px rgba(81, 102, 204, 0.7),
-    0 0 22px rgba(81, 102, 204, 0.4);
+    0 0 8px rgba(132, 148, 224, 0.7),
+    0 0 22px rgba(132, 148, 224, 0.4);
 }
 
 .glow-border {
   box-shadow:
     0 0 0 2px var(--ink),
-    0 0 16px -2px rgba(103, 126, 233, 0.35);
+    0 0 16px -2px rgba(132, 148, 224, 0.35);
 }
 
 /* Manga screentone dot texture — layer over photos/panels for that
@@ -191,7 +204,7 @@ body {
   );
   background-size: 6px 6px;
   mix-blend-mode: overlay;
-  opacity: 0.5;
+  opacity: 0.28;
   pointer-events: none;
 }
 
@@ -204,7 +217,7 @@ body {
 
 .manga-panel-red {
   border: 3px solid var(--ink);
-  box-shadow: 8px 8px 0 0 var(--red);
+  box-shadow: 8px 8px 0 0 var(--sign-red);
 }
 
 .text-balance {

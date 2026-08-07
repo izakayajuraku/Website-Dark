@@ -82,7 +82,7 @@ export function Header() {
                 href={tile.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-display text-lg tracking-wide text-ink/85 transition hover:text-red"
+                className="font-display text-lg tracking-wide text-ink/85 transition hover:text-neon"
               >
                 {t(`nav.${tile.key}`)}
               </a>
@@ -90,7 +90,7 @@ export function Header() {
               <Link
                 key={tile.key}
                 href={tile.href}
-                className="font-display text-lg tracking-wide text-ink/85 transition hover:text-red"
+                className="font-display text-lg tracking-wide text-ink/85 transition hover:text-neon"
               >
                 {t(`nav.${tile.key}`)}
               </Link>

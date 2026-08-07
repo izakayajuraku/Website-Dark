@@ -33,7 +33,7 @@ export const whySponsor = {
   en: {
     heading: "Why We Sponsor, Not Advertise",
     paragraphs: [
-      "I've never really liked traditional advertising. It's always felt a little hollow to me — paying a stranger's platform to put our name in front of more strangers.",
+      "I've never really liked traditional advertising. It's always felt a little hollow to me, paying a stranger's platform to put our name in front of more strangers.",
       "The people and groups on this page aren't strangers. Some of them have been coming to Juraku for years. Somewhere along the way, they stopped being just customers and became friends.",
       "We're a small izakaya on the Lower East Side. We don't have a marketing budget, and we're never going to outspend a big brand on ads. But I've learned that showing up for the people who've shown up for us means more than any ad campaign could.",
       "The return isn't always something I can measure the way an ad campaign is measured. But if it gets Juraku's name out into this community while we take care of the people close to us, that's a trade I'll make every time.",
@@ -43,7 +43,7 @@ export const whySponsor = {
   ja: {
     heading: "広告ではなく、応援を選ぶ理由",
     paragraphs: [
-      "正直に言うと、昔からいわゆる従来型の広告があまり好きではありません。知らない誰かのプラットフォームにお金を払って、また別の知らない誰かに名前を届けてもらう——そのやり方が、どこか薄っぺらく感じてしまうんです。",
+      "正直に言うと、昔からいわゆる従来型の広告があまり好きではありません。知らない誰かのプラットフォームにお金を払って、また別の知らない誰かに名前を届けてもらう。そのやり方が、どこか薄っぺらく感じてしまうんです。",
       "このページで紹介している人たちや団体は、僕たちにとって他人ではありません。何年も前からジュラクに通ってくれている人たちもいます。気づけば、単なるお客さんではなく、友人になっていました。",
       "僕たちはロウアー・イーストサイドにある小さな居酒屋です。大きな広告予算もないし、大企業と広告費で張り合うつもりもありません。でも、自分たちを支えてくれる人たちのために動くことは、どんな広告よりも意味があると気づいたんです。",
       "広告キャンペーンのように数字で効果を測れるわけではありません。それでも、身近な人たちを支えながらジュラクの名前がこの街に少しずつ広まっていくなら、それは何度でも選びたい選択です。",

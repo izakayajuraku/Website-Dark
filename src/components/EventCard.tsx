@@ -22,7 +22,7 @@ export function EventCard({
     >
       <p className="font-display text-2xl tracking-wide">{title}</p>
       <p
-        className={`mt-1 font-display text-lg ${muted ? "text-ink/60" : "text-red"}`}
+        className={`mt-1 font-display text-lg ${muted ? "text-ink/60" : "text-neon"}`}
       >
         {date}
       </p>

@@ -44,7 +44,7 @@ export default async function GalleryPage({
       <main className="flex-1">
         <section className="border-b-2 border-ink/80 bg-paper-dim/50">
           <div className="mx-auto max-w-3xl px-4 py-14 text-center sm:px-6">
-            <p className="font-jp text-sm tracking-widest text-red">
+            <p className="font-jp text-sm tracking-widest text-neon">
               {t("gallery.pretitle")}
             </p>
             <h1 className="mt-2 font-display text-5xl tracking-wide sm:text-6xl">
@@ -56,7 +56,7 @@ export default async function GalleryPage({
                 href={SITE.links.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline underline-offset-4 hover:text-red"
+                className="underline underline-offset-4 hover:text-neon"
               >
                 {SITE.socialHandle}
               </a>{" "}

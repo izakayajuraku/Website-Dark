@@ -16,7 +16,7 @@ export function Marquee({ items }: { items: string[] }) {
             className="font-display text-lg tracking-wide text-gold sm:text-xl"
           >
             {item}
-            <span aria-hidden className="ml-8 text-red">
+            <span aria-hidden className="ml-8 text-neon">
               ●
             </span>
           </span>
