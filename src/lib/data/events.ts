@@ -15,7 +15,25 @@ export type EventItem = {
   link?: string;
 };
 
-export const events: EventItem[] = [];
+export const events: EventItem[] = [
+  {
+    // Date, time and programme confirmed against the New York Buddhist
+    // Church's own listing; free admission per that listing too.
+    // This one is uptown at W 106th St, NOT at Juraku, so the venue is
+    // named in the detail text to stop anyone turning up on Ludlow.
+    // Move to pastEvents after Aug 9, 2026.
+    title: "New York Buddhist Church Bon Odori",
+    titleJa: "ニューヨーク仏教会 盆踊り",
+    date: "Sun, Aug 9 · 12:30–4:00pm",
+    dateJa: "8月9日（日）12:30〜16:00",
+    detail:
+      "Traditional Japanese bon folk dancing, taiko, cultural presentations, and food at the New York Buddhist Church on Riverside Drive at West 106th Street. Free to attend.",
+    detailJa:
+      "リバーサイド・ドライブ106丁目のニューヨーク仏教会で開催される盆踊り。伝統的な盆踊りに太鼓、日本文化のプレゼンテーション、そしてお食事も。入場無料です。",
+    slug: "nybc-bon-odori-2026",
+    link: "https://www.newyorkbuddhistchurch.org/",
+  },
+];
 
 export const recurringEvents: EventItem[] = [
   {

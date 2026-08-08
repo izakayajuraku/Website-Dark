@@ -191,7 +191,11 @@ function HomeContent() {
               </div>
             </Reveal>
             <div className="mt-6 grid gap-4 sm:grid-cols-3">
-              {(events.length > 0 ? events : recurringEvents).map((event, i) => (
+              {/* Dated events first, then the standing weekly night. This was
+                  previously an either/or fallback, which meant the moment a
+                  dated event was added the weekly meetup dropped off the home
+                  page entirely — the one thing that's always true. */}
+              {[...events, ...recurringEvents].slice(0, 3).map((event, i) => (
                 <Reveal
                   key={event.slug}
                   delay={i * 100}
