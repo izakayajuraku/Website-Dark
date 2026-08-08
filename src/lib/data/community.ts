@@ -46,6 +46,27 @@ export const communityEntries: CommunityEntry[] = [
       "Miyo Yoshida with her world championship belts, her daughter beside her",
   },
   {
+    // Group facts verified against Edamovement's own material and press:
+    // founded 2024 by Tamaki Horibe, Ryoka Matsumoto and Fuka Kojima; the
+    // "New York-based Japanese performance collective" line is their own
+    // wording. The Juraku relationship (sponsorship, and regulars who became
+    // friends) is per Juraku.
+    slug: "edamovement",
+    name: "Edamovement Lab",
+    category: "sponsorship",
+    categoryLabel: "Performers We Sponsor",
+    categoryLabelJa: "スポンサーパフォーマー",
+    blurb:
+      "A New York based Japanese performance collective, founded in 2024 by Tamaki Horibe, Ryoka Matsumoto, and Fuka Kojima. They turn Japanese folklore into dance, including a piece built around the Shichifukujin, the Seven Lucky Gods, and perform all over the city from RESOBOX to Japan Fes.\n\nWe're proud to be one of their sponsors. Fuka and the crew are regulars here too, so they were friends of Juraku long before any of it was official.",
+    blurbJa:
+      "2024年に堀部珠希、松本涼香、小島風香の3人が立ち上げた、ニューヨーク拠点の日本人パフォーマンス集団。七福神を題材にした作品など、日本の昔話をダンスとして表現し、RESOBOXやJapan Fesなど市内各地で公演を行っています。\n\n私たちはそのスポンサーの一つを務めています。風香ちゃんをはじめメンバーはジュラクの常連でもあり、スポンサーになるずっと前からの友人です。",
+    link: "https://www.instagram.com/edamovement/",
+    linkLabel: "@edamovement",
+    photo: "/images/community-edamovement.jpg",
+    photoAlt:
+      "The Edamovement Lab performers in kimono on the steps of a New York building",
+  },
+  {
     slug: "tenten-nyc",
     name: "TEN TEN NYC",
     category: "sponsorship",

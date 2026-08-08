@@ -19,12 +19,12 @@ export async function generateMetadata({
     ? {
         title: "コミュニティ＆コラボレーション",
         description:
-          "居酒屋ジュラクが応援するスポンサーシップ、アーティストコラボ、コミュニティパートナー。Miyo Yoshida、TEN TEN NYC、Showdown Chinatown、Chinese-American Planning Council、ChiChi (Cecilia Gault)、OMRC、Brotakuなど。",
+          "居酒屋ジュラクが応援するスポンサーシップ、アーティストコラボ、コミュニティパートナー。Miyo Yoshida、Edamovement Lab、TEN TEN NYC、Showdown Chinatown、Chinese-American Planning Council、ChiChi (Cecilia Gault)、OMRC、Brotakuなど。",
       }
     : {
         title: "Community & Collaborations",
         description:
-          "The sponsorships, artist collaborations, and community partners Izakaya Juraku is proud to support: Miyo Yoshida, TEN TEN NYC, Showdown Chinatown, the Chinese-American Planning Council, ChiChi (Cecilia Gault), OMRC, Brotaku, and more.",
+          "The sponsorships, artist collaborations, and community partners Izakaya Juraku is proud to support: Miyo Yoshida, Edamovement Lab, TEN TEN NYC, Showdown Chinatown, the Chinese-American Planning Council, ChiChi (Cecilia Gault), OMRC, Brotaku, and more.",
       };
 }
 
