@@ -38,6 +38,9 @@ export const communityEntries: CommunityEntry[] = [
     internalHref: "/blog/meet-miyo-yoshida-world-champion",
     internalLabel: "Read her story on our blog",
     internalLabelJa: "ブログで彼女の物語を読む",
+    photo: "/images/community-miyo-belts.jpg",
+    photoAlt:
+      "Miyo Yoshida with her world championship belts, alongside a young supporter",
   },
   {
     slug: "tenten-nyc",
