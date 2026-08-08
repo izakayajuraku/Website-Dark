@@ -72,6 +72,22 @@ export const communityEntries: CommunityEntry[] = [
     internalHref: undefined,
   },
   {
+    // Scale figures and the Suffolk Street address come from CPC's own site.
+    // The relationship to Juraku (long-time regulars and supporters, help
+    // hosting events including Showdown Chinatown) is per Juraku.
+    slug: "cpc-nyc",
+    name: "Chinese-American Planning Council",
+    category: "community",
+    categoryLabel: "Neighborhood Nonprofit",
+    categoryLabelJa: "地域の非営利団体",
+    blurb:
+      "A community services organization running more than 50 programs across 33 sites in Manhattan, Brooklyn, and Queens, serving over 8,000 people a day through education, family support, and economic empowerment. Their headquarters sits a few blocks from us on Suffolk Street. The CPC crew have been regulars and supporters of Juraku for years, and they've helped us host events, including Showdown Chinatown.",
+    blurbJa:
+      "マンハッタン、ブルックリン、クイーンズの33拠点で50以上のプログラムを運営し、教育、家族支援、経済的自立支援を通じて1日8,000人以上を支えるコミュニティ団体。本部はジュラクから数ブロック先のサフォーク・ストリートにあります。CPCの皆さんは長年の常連であり支援者。Showdown Chinatownをはじめとするイベント開催にも力を貸してくれています。",
+    link: "https://www.cpc-nyc.org/",
+    linkLabel: "cpc-nyc.org",
+  },
+  {
     slug: "chichi-cecilia-gault",
     name: "ChiChi (Cecilia Gault)",
     category: "collab",
