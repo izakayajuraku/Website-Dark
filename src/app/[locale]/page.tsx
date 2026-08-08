@@ -5,6 +5,7 @@ import { Link } from "@/i18n/navigation";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ScrollTile } from "@/components/ScrollTile";
+import { PlateButton } from "@/components/PlateButton";
 import { Reveal } from "@/components/Reveal";
 import { NAV_TILES, SITE, formatDate } from "@/lib/site";
 import { getAllPosts } from "@/lib/blog";
@@ -85,7 +86,7 @@ function HomeContent() {
           )}
 
           <div className="relative mx-auto flex min-h-[600px] max-w-6xl items-center px-4 py-24 sm:px-6 md:min-h-[680px]">
-            <Reveal className="max-w-2xl">
+            <Reveal className="w-full max-w-2xl">
               <p className="flex items-center gap-3 font-display text-xs tracking-[0.24em] text-ink/85">
                 <span aria-hidden className="h-px w-8 shrink-0 bg-red" />
                 {locale === "ja"
@@ -122,40 +123,25 @@ function HomeContent() {
                 {t("home.tagline")}
               </h1>
 
-              <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-                <a
+              <div className="mt-9 flex flex-col gap-3 sm:gap-4">
+                <PlateButton
                   href={SITE.links.reserve}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="cta cta-primary"
-                >
-                  {t("home.reserveCta")}
-                  <span aria-hidden className="cta-arrow">
-                    →
-                  </span>
-                </a>
-                <a
+                  label={t("home.reserveCta")}
+                  plate="/images/buttons/plate-reserve.png"
+                  priority
+                />
+                <PlateButton
                   href={SITE.links.menu}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="cta cta-secondary"
-                >
-                  {t("home.menuCta")}
-                  <span aria-hidden className="cta-arrow">
-                    →
-                  </span>
-                </a>
-                <a
+                  label={t("home.menuCta")}
+                  plate="/images/buttons/plate-menu.png"
+                  priority
+                />
+                <PlateButton
                   href={SITE.links.order}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="cta cta-ghost"
-                >
-                  {t("home.orderCta")}
-                  <span aria-hidden className="cta-arrow">
-                    →
-                  </span>
-                </a>
+                  label={t("home.orderCta")}
+                  plate="/images/buttons/plate-order.png"
+                  priority
+                />
               </div>
 
               <p className="mt-4 text-sm text-ink/70">{t("home.orderNote")}</p>

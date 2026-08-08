@@ -309,8 +309,75 @@ body {
   transform: translateY(-2px);
 }
 
+/* Illustrated plate CTAs. The plate is a wordless 4:1 transparent PNG; the
+   label sits over its open middle band, inset past the icon on the left and
+   the sparkle cluster on the right. */
+.plate-btn {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 24rem;
+  aspect-ratio: 4 / 1;
+  /* Container units below size the label against the plate itself, so the
+     wording keeps the same proportion the artwork was drawn at instead of
+     drifting small when the plate scales up. */
+  container-type: inline-size;
+  transition:
+    transform 200ms ease,
+    filter 200ms ease;
+}
+
+.plate-btn:hover {
+  transform: translateY(-3px);
+  filter: drop-shadow(0 8px 18px rgba(199, 39, 28, 0.45));
+}
+
+.plate-btn:focus-visible {
+  outline: 2px solid var(--ember);
+  outline-offset: 4px;
+}
+
+.plate-btn-label {
+  position: absolute;
+  inset: 0 10% 0 23%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3em;
+  font-family: var(--font-display), sans-serif;
+  /* ~6% of the plate width, matching the cap height in the source artwork. */
+  font-size: 6cqw;
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-wrap: balance;
+  color: var(--ink);
+  text-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.98),
+    0 0 16px rgba(0, 0, 0, 0.9);
+}
+
+/* Japanese labels run longer per glyph, so ease them down a touch to keep
+   them inside the plate's open band. */
+:lang(ja) .plate-btn-label {
+  font-size: 5.8cqw;
+  letter-spacing: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .plate-btn,
+  .plate-btn:hover {
+    transform: none;
+    transition: filter 200ms ease;
+  }
+}
+
 .cta-arrow {
   transition: transform 200ms ease;
+}
+
+.plate-btn:hover .cta-arrow {
+  transform: translateX(3px);
 }
 
 .cta:hover .cta-arrow {
