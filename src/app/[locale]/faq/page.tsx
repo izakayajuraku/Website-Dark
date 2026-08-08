@@ -4,6 +4,7 @@ import { setRequestLocale } from "next-intl/server";
 import { SITE } from "@/lib/site";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { PageHeader } from "@/components/PageHeader";
 import { Reveal } from "@/components/Reveal";
 
 export async function generateMetadata({
@@ -384,14 +385,9 @@ export default async function FaqPage({
       />
       <Header />
       <main className="flex-1">
-        <section className="border-b-2 border-ink/15 bg-paper-dim/50">
-          <div className="mx-auto max-w-3xl px-4 py-14 text-center sm:px-6">
-            <h1 className="font-display text-5xl tracking-wide sm:text-6xl">
-              {title}
-            </h1>
-            <p className="mt-4 text-ink/80">{subtitle}</p>
-          </div>
-        </section>
+        <PageHeader title={title} mark="問">
+          {subtitle}
+        </PageHeader>
 
         <section className="mx-auto max-w-3xl px-4 py-14 sm:px-6">
           <div className="space-y-4">

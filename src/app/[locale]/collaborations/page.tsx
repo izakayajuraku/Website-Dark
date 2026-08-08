@@ -5,6 +5,7 @@ import { Link } from "@/i18n/navigation";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
+import { PageHeader } from "@/components/PageHeader";
 import { communityEntries } from "@/lib/data/community";
 import { whySponsor } from "@/lib/placeholder-content";
 
@@ -42,26 +43,17 @@ export default async function CollaborationsPage({
     <>
       <Header />
       <main className="flex-1">
-        <section className="relative overflow-hidden border-b-[3px] border-ink bg-void">
-          <div aria-hidden className="screentone absolute inset-0" />
-          <div
-            aria-hidden
-            className="absolute inset-0 bg-gradient-to-b from-void via-void/95 to-void"
-          />
-          <div className="relative mx-auto max-w-3xl px-4 py-16 text-center sm:px-6 sm:py-20">
-            <p className="font-jp text-sm tracking-widest neon-text">
-              {isJa ? "コミュニティ" : "COMMUNITY"}
-            </p>
-            <h1 className="mt-2 font-display text-5xl tracking-wide text-ink sm:text-6xl">
-              {isJa ? "コミュニティ＆コラボレーション" : "Community & Collaborations"}
-            </h1>
-            <p className="mx-auto mt-4 max-w-xl text-ink/80">
-              {isJa
-                ? "ジュラクは近所のお店であると同時に、アーティスト、アスリート、地域コミュニティのハブでもありたいと思っています。私たちが応援している、そして応援してもらっている人たちをご紹介します。"
-                : "Juraku is a neighborhood restaurant, but we've always wanted to be a hub for artists, athletes, and community too. Here's who we back, and who backs us."}
-            </p>
-          </div>
-        </section>
+        <PageHeader
+          pretitle={isJa ? "コミュニティ" : "COMMUNITY"}
+          title={
+            isJa ? "コミュニティ＆コラボレーション" : "Community & Collaborations"
+          }
+          mark="縁"
+        >
+          {isJa
+            ? "ジュラクは近所のお店であると同時に、アーティスト、アスリート、地域コミュニティのハブでもありたいと思っています。私たちが応援している、そして応援してもらっている人たちをご紹介します。"
+            : "Juraku is a neighborhood restaurant, but we've always wanted to be a hub for artists, athletes, and community too. Here's who we back, and who backs us."}
+        </PageHeader>
 
         <section className="mx-auto max-w-3xl px-4 py-14 sm:px-6">
           <Reveal>

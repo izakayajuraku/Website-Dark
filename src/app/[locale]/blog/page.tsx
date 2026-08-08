@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { PageHeader } from "@/components/PageHeader";
 import { Reveal } from "@/components/Reveal";
 import { getAllPosts } from "@/lib/blog";
 import { formatDate, SITE } from "@/lib/site";
@@ -54,17 +55,13 @@ export default async function BlogIndexPage({
     <>
       <Header />
       <main className="flex-1">
-        <section className="border-b-2 border-ink/15 bg-paper-dim/50">
-          <div className="mx-auto max-w-3xl px-4 py-14 text-center sm:px-6">
-            <p className="font-jp text-sm tracking-widest text-ember">
-              {t("blog.pretitle")}
-            </p>
-            <h1 className="mt-2 font-display text-5xl tracking-wide sm:text-6xl">
-              {t("blog.title")}
-            </h1>
-            <p className="mt-4 text-ink/80">{t("blog.subtitle")}</p>
-          </div>
-        </section>
+        <PageHeader
+          pretitle={t("blog.pretitle")}
+          title={t("blog.title")}
+          mark="話"
+        >
+          {t("blog.subtitle")}
+        </PageHeader>
 
         <section className="border-b-2 border-ink/10 bg-void">
           <div className="mx-auto max-w-3xl px-4 py-10 text-center sm:px-6">

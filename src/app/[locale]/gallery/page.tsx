@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { PageHeader } from "@/components/PageHeader";
 import { GalleryLightbox } from "@/components/GalleryLightbox";
 import { SITE } from "@/lib/site";
 
@@ -51,28 +52,22 @@ export default async function GalleryPage({
     <>
       <Header />
       <main className="flex-1">
-        <section className="border-b-2 border-ink/15 bg-paper-dim/50">
-          <div className="mx-auto max-w-3xl px-4 py-14 text-center sm:px-6">
-            <p className="font-jp text-sm tracking-widest text-ember">
-              {t("gallery.pretitle")}
-            </p>
-            <h1 className="mt-2 font-display text-5xl tracking-wide sm:text-6xl">
-              {t("gallery.title")}
-            </h1>
-            <p className="mt-4 text-ink/80">
-              {t("gallery.tagPrefix")}{" "}
-              <a
-                href={SITE.links.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline underline-offset-4 hover:text-ember"
-              >
-                {SITE.socialHandle}
-              </a>{" "}
-              {t("gallery.tagSuffix")}
-            </p>
-          </div>
-        </section>
+        <PageHeader
+          pretitle={t("gallery.pretitle")}
+          title={t("gallery.title")}
+          mark="夜"
+        >
+          {t("gallery.tagPrefix")}{" "}
+          <a
+            href={SITE.links.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-ember underline underline-offset-4 hover:text-ink"
+          >
+            {SITE.socialHandle}
+          </a>{" "}
+          {t("gallery.tagSuffix")}
+        </PageHeader>
 
         <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
           <GalleryLightbox photos={photos} />

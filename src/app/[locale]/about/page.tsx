@@ -3,6 +3,7 @@ import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { PageHeader } from "@/components/PageHeader";
 import { Reveal } from "@/components/Reveal";
 import { kiyoNote } from "@/lib/placeholder-content";
 
@@ -39,16 +40,11 @@ export default async function AboutPage({
     <>
       <Header />
       <main className="flex-1">
-        <section className="border-b-2 border-ink/15 bg-paper-dim/50">
-          <div className="mx-auto max-w-3xl px-4 py-14 text-center sm:px-6">
-            <p className="font-jp text-sm tracking-widest text-ember">
-              {t("about.pretitle")}
-            </p>
-            <h1 className="mt-2 font-display text-5xl tracking-wide sm:text-6xl">
-              {t("about.title")}
-            </h1>
-          </div>
-        </section>
+        <PageHeader
+          pretitle={t("about.pretitle")}
+          title={t("about.title")}
+          mark="聚楽"
+        />
 
         <section className="mx-auto max-w-3xl px-4 py-14 sm:px-6">
           <Reveal>

@@ -397,6 +397,61 @@ body {
   }
 }
 
+/* Interior page header band. Quieter than the home hero but built from the
+   same parts: red edge, screentone, a low sign-glow. */
+.page-header {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--void);
+  border-bottom: 4px solid var(--red);
+}
+
+/* Neon spill, as if a sign just off-frame is lighting the wall. */
+.page-header-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    62% 130% at 50% 42%,
+    rgba(199, 39, 28, 0.22) 0%,
+    rgba(199, 39, 28, 0.07) 45%,
+    transparent 72%
+  );
+  pointer-events: none;
+}
+
+/* Used when a header carries real artwork behind it. Dark enough that the
+   cream heading keeps its contrast, light enough to still read as art. */
+.page-header-scrim {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.82) 0%,
+      rgba(0, 0, 0, 0.7) 50%,
+      rgba(0, 0, 0, 0.86) 100%
+    );
+  pointer-events: none;
+}
+
+/* Oversized kanji watermark. Decorative only — kept faint enough that the
+   cream heading on top keeps its full contrast against the black band. */
+.page-header-mark {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-jp), sans-serif;
+  font-size: clamp(9rem, 26vw, 20rem);
+  line-height: 1;
+  color: var(--ink);
+  opacity: 0.055;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+
 /* Sits behind hero/section copy so text never rides raw photography.
    Narrow screens get a near-uniform wash instead, since a horizontal
    gradient leaves too little protected width to hold the headline. */
