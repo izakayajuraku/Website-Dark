@@ -16,16 +16,17 @@
     "pretitle": "JURAKU",
     "tagline": "東京の味を、NYCの熱気で。",
     "subtitle": "ニューヨーク・ロウアーイーストサイドの居酒屋。からあげや焼き鳥、日本酒を火曜から日曜までお楽しみいただけます。",
-    "menuCta": "メニューを見る →",
-    "orderCta": "オンライン注文（手数料なし）→",
-    "reserveCta": "テーブルを予約する →",
+    "menuCta": "メニューを見る",
+    "orderCta": "オンライン注文",
+    "reserveCta": "テーブルを予約する",
     "upcomingEvents": "近日開催イベント",
     "viewFullCalendar": "カレンダーを見る →",
     "latestFromBlog": "最新ブログ",
     "viewAllArticles": "記事一覧を見る →",
-    "heroKicker": "うまい飯。冷えた酒。騒がしい仲間。長い夜。",
+    "heroKicker": "うまい飯。いい仲間。いい時間。",
     "heroBrandTop": "居酒屋",
-    "heroBrandBottom": "聚楽"
+    "heroBrandBottom": "聚楽",
+    "orderNote": "オンライン注文なら手数料はかかりません。"
   },
   "footer": {
     "ourHome": "お店の場所",

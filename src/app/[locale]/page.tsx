@@ -86,14 +86,12 @@ function HomeContent() {
 
           <div className="relative mx-auto flex min-h-[600px] max-w-6xl items-center px-4 py-24 sm:px-6 md:min-h-[680px]">
             <Reveal className="max-w-2xl">
-              <div className="flex flex-wrap items-center gap-3">
-                <span className="border-2 border-red bg-red px-2.5 py-1 font-display text-xs tracking-[0.2em] text-ink">
-                  {locale === "ja" ? "ロウアー・イーストサイド" : "LOWER EAST SIDE, NYC"}
-                </span>
-                <span className="relative border-2 border-ink bg-ink px-3 py-1 font-display text-xs tracking-wide text-void">
-                  乾杯！Kanpai!
-                </span>
-              </div>
+              <p className="flex items-center gap-3 font-display text-xs tracking-[0.24em] text-ink/85">
+                <span aria-hidden className="h-px w-8 shrink-0 bg-red" />
+                {locale === "ja"
+                  ? "ロウアー・イーストサイド, NYC"
+                  : "LOWER EAST SIDE, NYC"}
+              </p>
 
               {/* Brand lockup: the graphic centerpiece. Large display type is
                   the one place the deep fill red clears contrast on its own. */}
@@ -124,32 +122,43 @@ function HomeContent() {
                 {t("home.tagline")}
               </h1>
 
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
                 <a
                   href={SITE.links.reserve}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="manga-panel-red bg-red px-5 py-2.5 font-display tracking-wide text-ink transition hover:-translate-y-0.5 hover:bg-red-dark"
+                  className="cta cta-primary"
                 >
                   {t("home.reserveCta")}
+                  <span aria-hidden className="cta-arrow">
+                    →
+                  </span>
                 </a>
                 <a
                   href={SITE.links.menu}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="manga-panel bg-ink px-5 py-2.5 font-display tracking-wide text-void transition hover:-translate-y-0.5"
+                  className="cta cta-secondary"
                 >
                   {t("home.menuCta")}
+                  <span aria-hidden className="cta-arrow">
+                    →
+                  </span>
                 </a>
                 <a
                   href={SITE.links.order}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="manga-panel bg-void/80 px-5 py-2.5 font-display tracking-wide text-ink backdrop-blur transition hover:-translate-y-0.5 hover:bg-ink hover:text-void"
+                  className="cta cta-ghost"
                 >
                   {t("home.orderCta")}
+                  <span aria-hidden className="cta-arrow">
+                    →
+                  </span>
                 </a>
               </div>
+
+              <p className="mt-4 text-sm text-ink/70">{t("home.orderNote")}</p>
             </Reveal>
           </div>
         </section>

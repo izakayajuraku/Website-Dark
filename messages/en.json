@@ -16,16 +16,17 @@
     "pretitle": "JURAKU",
     "tagline": "Tokyo-inspired comfort food with NYC energy.",
     "subtitle": "A Japanese gastropub on the Lower East Side serving karaage, yakitori, and sake, Tuesday through Sunday.",
-    "menuCta": "View Menu →",
-    "orderCta": "Order Direct (no fees) →",
-    "reserveCta": "Reserve a Table →",
+    "menuCta": "View Menu",
+    "orderCta": "Order Direct",
+    "reserveCta": "Reserve a Table",
     "upcomingEvents": "Upcoming Events",
     "viewFullCalendar": "View Full Calendar →",
     "latestFromBlog": "Latest From the Blog",
     "viewAllArticles": "View All Articles →",
-    "heroKicker": "GOOD FOOD. COLD DRINKS. LOUD FRIENDS. LATE NIGHTS.",
+    "heroKicker": "GOOD FOOD. GOOD PEOPLE. GOOD TIMES.",
     "heroBrandTop": "Izakaya",
-    "heroBrandBottom": "JURAKU"
+    "heroBrandBottom": "JURAKU",
+    "orderNote": "No fees when you order direct."
   },
   "footer": {
     "ourHome": "Our Home",
