@@ -56,14 +56,16 @@ export function Header() {
           className="flex items-center gap-2 sm:gap-3"
           onClick={() => setOpen(false)}
         >
-          <Image
-            src="/images/logo-icon-white.png"
-            alt=""
-            width={5230}
-            height={5920}
-            className="h-11 w-auto object-contain sm:h-12"
-            priority
-          />
+          <span className="logo-lantern">
+            <Image
+              src="/images/logo-icon.png"
+              alt=""
+              width={5230}
+              height={5920}
+              className="h-11 w-auto object-contain sm:h-12"
+              priority
+            />
+          </span>
           <Image
             src="/images/logo-wordmark.png"
             alt="Izakaya Juraku"

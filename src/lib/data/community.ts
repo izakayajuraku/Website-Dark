@@ -67,6 +67,26 @@ export const communityEntries: CommunityEntry[] = [
       "The Edamovement Lab performers in kimono on the steps of a New York building",
   },
   {
+    // Company facts from Samurai Sword Soul's own site and press: founded
+    // 2003 by Yoshi Amao; TATE is Japanese sword stage fighting. The 20th
+    // anniversary run of "Don't Cry, My Friend" was December 2025, hence the
+    // past tense on the sponsorship. Juraku sponsored that show.
+    slug: "samurai-sword-soul",
+    name: "Samurai Sword Soul",
+    category: "sponsorship",
+    categoryLabel: "Show We Sponsored",
+    categoryLabelJa: "スポンサー公演",
+    blurb:
+      "A New York samurai theater company founded in 2003 by Yoshi Amao, mixing comedy, drama, and TATE, the Japanese art of sword stage fighting. We sponsored Don't Cry, My Friend, their 20th anniversary production, an original story drawn from the folktales Urashima Taro and Naita Aka Oni.",
+    blurbJa:
+      "2003年にYoshi Amaoが設立した、ニューヨークの侍演劇カンパニー。コメディ、人間ドラマ、そして殺陣を融合させた舞台を上演しています。20周年記念公演『Don't Cry, My Friend』ではスポンサーを務めました。浦島太郎と「泣いた赤鬼」に着想を得たオリジナル作品です。",
+    link: "https://www.samuraiswordsoul.com/",
+    linkLabel: "samuraiswordsoul.com",
+    photo: "/images/community-samurai-sword-soul.jpg",
+    photoAlt:
+      "The Samurai Sword Soul cast in stage costume with drawn swords, lit against a black background",
+  },
+  {
     slug: "tenten-nyc",
     name: "TEN TEN NYC",
     category: "sponsorship",
@@ -98,6 +118,11 @@ export const communityEntries: CommunityEntry[] = [
     link: "https://www.instagram.com/showdown.chinatown/",
     linkLabel: "@showdown.chinatown",
     internalHref: undefined,
+    photo: "/images/community-showdown-mural.jpg",
+    // Credit the muralist in the alt text: it's their work, and they signed
+    // it in frame. Juraku is tagged on the mural alongside TEN TEN.
+    photoAlt:
+      "Shiro One spray-painting a mural at Showdown Chinatown, with Juraku tagged on the wall",
   },
   {
     // Scale figures and the Suffolk Street address come from CPC's own site.
@@ -130,6 +155,8 @@ export const communityEntries: CommunityEntry[] = [
     internalHref: "/blog/cecilia-gault-cocktail",
     internalLabel: "Read the cocktail story",
     internalLabelJa: "カクテルの物語を読む",
+    photo: "/images/community-chichi.jpg",
+    photoAlt: "ChiChi (Cecilia Gault) holding a cocktail in a studio portrait",
   },
   {
     slug: "abigail-tan",

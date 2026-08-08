@@ -397,6 +397,35 @@ body {
   }
 }
 
+/* The daruma mark lit from behind, as if a chochin were sitting behind it.
+   This is what lets the original dark navy icon work on a black header: on
+   its own it measures 1.1:1 and disappears, but silhouetted against the warm
+   core of the glow it reads at roughly 6:1. The gradient runs amber at the
+   centre out to Juraku red at the edge — the amber is doing the legibility
+   work, and it's also what real lantern light looks like. */
+.logo-lantern {
+  position: relative;
+  display: inline-flex;
+  isolation: isolate;
+}
+
+.logo-lantern::before {
+  content: "";
+  position: absolute;
+  inset: -24% -20%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 50% 46%,
+    rgba(255, 168, 96, 0.92) 0%,
+    rgba(232, 108, 48, 0.72) 38%,
+    rgba(199, 39, 28, 0.42) 60%,
+    rgba(199, 39, 28, 0) 78%
+  );
+  filter: blur(5px);
+  z-index: -1;
+  pointer-events: none;
+}
+
 /* Interior page header band. Quieter than the home hero but built from the
    same parts: red edge, screentone, a low sign-glow. */
 .page-header {
