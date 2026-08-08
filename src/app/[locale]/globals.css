@@ -1,36 +1,30 @@
 @import "tailwindcss";
 
 :root {
-  /* Dark concept, tuned for actual readability (checked against WCAG
-     contrast, not eyeballed): near-black-on-near-white was measuring
-     15:1+, which reads as glare/eye strain rather than "high contrast."
-     Surfaces are a warm charcoal rather than true black, and ink is
-     softened slightly — settles body text around 11-13:1, still very
-     legible, without the halation effect.
-     "paper" = page surface (dark), "ink" = primary text/outline (light) —
+  /* Dark anime/manga nightlife palette: black-heavy, high contrast, graphic.
+     Deliberately NOT warm brown — surfaces are neutral sumi black and
+     charcoal so the page reads as a printed poster at night, not a rustic
+     gastropub. Roughly 70% black/charcoal, 20% cream, 10% red + accents.
+     "paper" = page surface (dark), "ink" = primary text/outline (cream) —
      the names are kept so bg-paper / text-ink / border-ink flip for free. */
-  --paper: #241c15;
-  --paper-dim: #2d2319;
-  --card: #332820;
-  --void: #171310;
-  --ink: #e9dfd0;
-  /* Two blues, not one: --red stays a deeper, richer blue for FILLS
-     (buttons, borders) where cream/void text sits on top of it. --neon is
-     a lighter tint of the same hue (sampled from the real logo icon,
-     #0f1531, hue 229) reserved for blue TEXT rendered directly on the dark
-     page — the deep fill blue measured under 4:1 contrast as text, which
-     fails WCAG AA and was genuinely hard to read. The `--red` name is kept
-     so bg-red/border-red utilities flip for free; it no longer renders red. */
-  --red: #4257bd;
-  --red-dark: #2c3c8e;
-  --gold: #dcb15a;
-  --neon: #8494e0;
-  /* The real second tube color from the storefront's neon sign (blue
-     "izakaya" + red "JURAKU"), sampled from the actual logo wordmark
-     (#c22026). Reserved for decorative glow/shadow accents only — borders,
-     hard shadows, glow rings — never for text, since it reads as too warm
-     and low-contrast as small type on this dark palette. */
-  --sign-red: #bc1a20;
+  --paper: #0b0b0d;
+  --paper-dim: #17171b;
+  --card: #17171b;
+  --void: #000000;
+  --ink: #f2e7d3;
+  /* Juraku red is the dominant accent, but it splits by ROLE because it
+     measures 3.5:1 against black — fine for large display type and as a
+     fill under cream text (4.59:1), but a fail for small text. --ember is
+     the same hue lifted to 5.4:1 and is the ONLY red allowed for body-size
+     text, links, and labels. The --red name is kept so bg-red/border-red
+     utilities keep working across the codebase. */
+  --red: #c7271c;
+  --red-dark: #8e1b16;
+  --ember: #e6564c;
+  /* Supporting accents, used sparingly — never as large surfaces. */
+  --orange: #e26a2c;
+  --neon: #3b82f6;
+  --gold: #e7b84b;
 }
 
 @theme inline {
@@ -41,9 +35,10 @@
   --color-ink: var(--ink);
   --color-red: var(--red);
   --color-red-dark: var(--red-dark);
+  --color-ember: var(--ember);
+  --color-orange: var(--orange);
   --color-gold: var(--gold);
   --color-neon: var(--neon);
-  --color-sign-red: var(--sign-red);
   --font-display: var(--font-display);
   --font-body: var(--font-body);
   --font-jp: var(--font-jp);
@@ -57,9 +52,11 @@ body {
   background-color: var(--paper);
   color: var(--ink);
   font-family: var(--font-body), system-ui, sans-serif;
+  /* Neutral grain only — a warm-tinted dot pattern here was what pushed the
+     whole page toward sepia. Kept nearly invisible so black stays black. */
   background-image:
-    radial-gradient(circle at 1px 1px, rgba(233, 223, 208, 0.045) 1px, transparent 0);
-  background-size: 18px 18px;
+    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.028) 1px, transparent 0);
+  background-size: 22px 22px;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -146,7 +143,7 @@ body {
 }
 
 .prose-juraku a {
-  color: var(--red);
+  color: var(--ember);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -165,30 +162,33 @@ body {
 .card-elevated:hover {
   transform: translateY(-3px);
   box-shadow:
-    0 2px 6px rgba(0, 0, 0, 0.4),
-    0 0 28px -4px rgba(66, 87, 189, 0.4),
-    0 16px 36px -10px rgba(0, 0, 0, 0.6);
+    0 2px 6px rgba(0, 0, 0, 0.5),
+    0 0 26px -4px rgba(199, 39, 28, 0.45),
+    0 16px 36px -10px rgba(0, 0, 0, 0.75);
 }
 
-/* Neon text/border glow utilities for the dark concept's sign-lit feel */
-.neon-text {
-  color: var(--neon);
-  text-shadow:
-    0 0 6px rgba(132, 148, 224, 0.75),
-    0 0 18px rgba(132, 148, 224, 0.4);
-}
-
+/* Sign-lit glow utilities. Both render the ember red (the text-safe tint),
+   not the deep fill red — glowing type still has to clear contrast. */
+.neon-text,
 .neon-red-text {
+  color: var(--ember);
+  text-shadow:
+    0 0 7px rgba(230, 86, 76, 0.65),
+    0 0 20px rgba(199, 39, 28, 0.4);
+}
+
+/* The one blue moment, for the rare "izakaya" tube-sign accent. */
+.neon-blue-text {
   color: var(--neon);
   text-shadow:
-    0 0 8px rgba(132, 148, 224, 0.7),
-    0 0 22px rgba(132, 148, 224, 0.4);
+    0 0 7px rgba(59, 130, 246, 0.65),
+    0 0 20px rgba(59, 130, 246, 0.35);
 }
 
 .glow-border {
   box-shadow:
     0 0 0 2px var(--ink),
-    0 0 16px -2px rgba(132, 148, 224, 0.35);
+    0 0 16px -2px rgba(199, 39, 28, 0.4);
 }
 
 /* Manga screentone dot texture — layer over photos/panels for that
@@ -199,12 +199,12 @@ body {
   inset: 0;
   background-image: radial-gradient(
     circle,
-    rgba(243, 230, 210, 0.55) 1px,
+    rgba(255, 255, 255, 0.5) 1px,
     transparent 1.3px
   );
   background-size: 6px 6px;
   mix-blend-mode: overlay;
-  opacity: 0.28;
+  opacity: 0.22;
   pointer-events: none;
 }
 
@@ -217,7 +217,49 @@ body {
 
 .manga-panel-red {
   border: 3px solid var(--ink);
-  box-shadow: 8px 8px 0 0 var(--sign-red);
+  box-shadow: 8px 8px 0 0 var(--red);
+}
+
+/* Collectible-panel treatment for food/drink/content cards: hard red rule,
+   heavy black body, no soft blur. Reads as a printed manga panel rather
+   than a floating web card. */
+.panel-card {
+  border: 2px solid var(--red);
+  background-color: var(--card);
+  box-shadow: 6px 6px 0 0 rgba(0, 0, 0, 0.9);
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease;
+}
+
+.panel-card:hover {
+  transform: translate(-2px, -2px);
+  border-color: var(--ember);
+  box-shadow: 10px 10px 0 0 rgba(0, 0, 0, 0.95);
+}
+
+/* Sits behind hero/section copy so text never rides raw photography.
+   Narrow screens get a near-uniform wash instead, since a horizontal
+   gradient leaves too little protected width to hold the headline. */
+.scrim-left {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.86) 0%,
+    rgba(0, 0, 0, 0.78) 100%
+  );
+}
+
+@media (min-width: 768px) {
+  .scrim-left {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.94) 0%,
+      rgba(0, 0, 0, 0.82) 42%,
+      rgba(0, 0, 0, 0.35) 72%,
+      rgba(0, 0, 0, 0.15) 100%
+    );
+  }
 }
 
 .text-balance {

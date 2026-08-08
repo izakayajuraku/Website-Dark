@@ -55,7 +55,7 @@ export default async function EventsPage({
 
         <section className="border-b-2 border-ink/10 bg-paper-dim/50">
           <div className="mx-auto max-w-3xl px-4 py-14 text-center sm:px-6">
-            <p className="font-jp text-sm tracking-widest text-neon">
+            <p className="font-jp text-sm tracking-widest text-ember">
               {t("events.pretitle")}
             </p>
             <h1 className="mt-2 font-display text-5xl tracking-wide sm:text-6xl">
@@ -67,7 +67,7 @@ export default async function EventsPage({
                 href={SITE.links.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline underline-offset-4 hover:text-neon"
+                className="underline underline-offset-4 hover:text-ember"
               >
                 {SITE.socialHandle}
               </a>{" "}
@@ -83,7 +83,7 @@ export default async function EventsPage({
           <section className="border-b-2 border-ink/10 bg-paper-dim/50">
             <div className="mx-auto max-w-3xl px-4 py-14 sm:px-6">
               <Reveal>
-                <h2 className="font-display text-3xl tracking-wide text-neon">
+                <h2 className="font-display text-3xl tracking-wide text-ember">
                   {t("events.everyWeek")}
                 </h2>
               </Reveal>

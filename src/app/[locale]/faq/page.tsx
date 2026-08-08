@@ -45,7 +45,7 @@ function getFaqs(locale: string): Faq[] {
               href={SITE.links.reserve}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-neon underline underline-offset-4"
+              className="text-ember underline underline-offset-4"
             >
               Resy
             </a>
@@ -69,7 +69,7 @@ function getFaqs(locale: string): Faq[] {
               href={SITE.links.order}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-neon underline underline-offset-4"
+              className="text-ember underline underline-offset-4"
             >
               Toast
             </a>
@@ -86,7 +86,7 @@ function getFaqs(locale: string): Faq[] {
             ご来店の際はスタッフまでアレルギーをお知らせください。できる限り対応いたしますが、多品目を扱う厨房のため特定アレルゲンの完全除去はお約束できません。重度のアレルギーがある方は、事前にお電話（
             <a
               href={SITE.phoneHref}
-              className="text-neon underline underline-offset-4"
+              className="text-ember underline underline-offset-4"
             >
               {SITE.phone}
             </a>
@@ -102,7 +102,7 @@ function getFaqs(locale: string): Faq[] {
             ぜひお手伝いさせてください。人数、ご希望の日程、内容の詳細を
             <a
               href={`mailto:${SITE.email}`}
-              className="text-neon underline underline-offset-4"
+              className="text-ember underline underline-offset-4"
             >
               {SITE.email}
             </a>
@@ -121,7 +121,7 @@ function getFaqs(locale: string): Faq[] {
               href={SITE.links.giftCards}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-neon underline underline-offset-4"
+              className="text-ember underline underline-offset-4"
             >
               ギフトカード
             </a>
@@ -130,7 +130,7 @@ function getFaqs(locale: string): Faq[] {
               href={SITE.links.rewards}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-neon underline underline-offset-4"
+              className="text-ember underline underline-offset-4"
             >
               特典プログラムの登録
             </a>
@@ -162,14 +162,14 @@ function getFaqs(locale: string): Faq[] {
                 href={SITE.links.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-neon underline underline-offset-4"
+                className="text-ember underline underline-offset-4"
               >
                 {SITE.socialHandle}
               </a>
               にDMするか、メール（
               <a
                 href={`mailto:${SITE.email}`}
-                className="text-neon underline underline-offset-4"
+                className="text-ember underline underline-offset-4"
               >
                 {SITE.email}
               </a>
@@ -193,7 +193,7 @@ function getFaqs(locale: string): Faq[] {
             href={SITE.links.reserve}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-neon underline underline-offset-4"
+            className="text-ember underline underline-offset-4"
           >
             Resy
           </a>
@@ -223,7 +223,7 @@ function getFaqs(locale: string): Faq[] {
             href={SITE.links.order}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-neon underline underline-offset-4"
+            className="text-ember underline underline-offset-4"
           >
             Toast
           </a>{" "}
@@ -245,7 +245,7 @@ function getFaqs(locale: string): Faq[] {
           at{" "}
           <a
             href={SITE.phoneHref}
-            className="text-neon underline underline-offset-4"
+            className="text-ember underline underline-offset-4"
           >
             {SITE.phone}
           </a>{" "}
@@ -262,7 +262,7 @@ function getFaqs(locale: string): Faq[] {
           We'd love to help you plan it. Email us at{" "}
           <a
             href={`mailto:${SITE.email}`}
-            className="text-neon underline underline-offset-4"
+            className="text-ember underline underline-offset-4"
           >
             {SITE.email}
           </a>{" "}
@@ -281,7 +281,7 @@ function getFaqs(locale: string): Faq[] {
             href={SITE.links.giftCards}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-neon underline underline-offset-4"
+            className="text-ember underline underline-offset-4"
           >
             gift cards
           </a>{" "}
@@ -290,7 +290,7 @@ function getFaqs(locale: string): Faq[] {
             href={SITE.links.rewards}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-neon underline underline-offset-4"
+            className="text-ember underline underline-offset-4"
           >
             rewards sign-up
           </a>{" "}
@@ -333,14 +333,14 @@ function getFaqs(locale: string): Faq[] {
               href={SITE.links.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-neon underline underline-offset-4"
+              className="text-ember underline underline-offset-4"
             >
               {SITE.socialHandle}
             </a>{" "}
             or email{" "}
             <a
               href={`mailto:${SITE.email}`}
-              className="text-neon underline underline-offset-4"
+              className="text-ember underline underline-offset-4"
             >
               {SITE.email}
             </a>{" "}

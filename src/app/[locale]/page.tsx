@@ -31,54 +31,78 @@ function HomeContent() {
     <>
       <Header />
       <main className="flex-1">
-        {/* Hero — real photo, manga screentone + gradient, quieted messaging */}
-        <section className="relative min-h-[560px] overflow-hidden border-b-[3px] border-ink sm:min-h-[640px]">
+        {/* Hero — poster composition: hard black frame, heavy left scrim so
+            type never rides raw photography, brand lockup as the focal point. */}
+        <section className="relative min-h-[600px] overflow-hidden border-b-4 border-red bg-void sm:min-h-[680px]">
           <Image
-            src="/images/hero-concept-ai.png"
-            alt="Izakaya Juraku's storefront at night"
+            src="/images/hero-yukata-neon.jpg"
+            alt="Guests in yukata walking past Izakaya Juraku's neon-lit storefront on Ludlow Street at night"
             fill
             sizes="100vw"
             priority
-            className="object-cover object-center"
+            className="object-cover object-[62%_38%]"
           />
+          <div aria-hidden className="scrim-left absolute inset-0" />
           <div
             aria-hidden
-            className="absolute inset-0 bg-gradient-to-t from-void via-void/85 to-void/30"
+            className="absolute inset-0 bg-gradient-to-t from-void via-transparent to-void/70"
           />
           <div aria-hidden className="screentone absolute inset-0" />
 
-          <div className="relative mx-auto flex min-h-[560px] max-w-6xl items-end px-4 pb-10 pt-24 sm:px-6 sm:pb-14 sm:pt-32 md:min-h-[640px]">
-            <Reveal className="max-w-xl">
-              <div className="flex items-center gap-3">
-                <p className="font-jp text-sm tracking-widest text-neon neon-red-text">
-                  {t("home.pretitle")}
-                </p>
-                <span className="relative rounded-full border-2 border-ink bg-ink px-3 py-1 font-display text-xs tracking-wide text-void shadow-[0_0_14px_-2px_rgba(188,26,32,0.6)]">
+          <div className="relative mx-auto flex min-h-[600px] max-w-6xl items-center px-4 py-24 sm:px-6 md:min-h-[680px]">
+            <Reveal className="max-w-2xl">
+              <div className="flex flex-wrap items-center gap-3">
+                <span className="border-2 border-red bg-red px-2.5 py-1 font-display text-xs tracking-[0.2em] text-ink">
+                  {locale === "ja" ? "ロウアー・イーストサイド" : "LOWER EAST SIDE, NYC"}
+                </span>
+                <span className="relative border-2 border-ink bg-ink px-3 py-1 font-display text-xs tracking-wide text-void">
                   乾杯！Kanpai!
-                  <span
-                    aria-hidden
-                    className="absolute -left-1.5 top-1/2 h-3 w-3 -translate-y-1/2 -rotate-45 border-b-2 border-l-2 border-ink bg-ink"
-                  />
                 </span>
               </div>
+
+              {/* Brand lockup: the graphic centerpiece. Large display type is
+                  the one place the deep fill red clears contrast on its own. */}
+              <p
+                aria-hidden
+                className="mt-5 font-display text-4xl leading-[0.9] tracking-[0.08em] text-ink sm:text-5xl"
+              >
+                {t("home.heroBrandTop")}
+              </p>
+              <p
+                aria-hidden
+                className="font-display text-6xl leading-[0.9] tracking-wide text-red drop-shadow-[0_0_24px_rgba(199,39,28,0.55)] sm:text-8xl"
+              >
+                {t("home.heroBrandBottom")}
+              </p>
+
+              <p className="mt-5 max-w-lg font-display text-sm tracking-[0.14em] text-ink sm:text-base">
+                {t("home.heroKicker")}
+              </p>
+
               <h1
                 className={
                   locale === "ja"
-                    ? "text-balance font-jp text-4xl font-bold leading-snug tracking-normal text-ink sm:text-5xl md:text-6xl"
-                    : "text-balance font-display text-5xl leading-[0.95] tracking-wide text-ink sm:text-6xl md:text-7xl"
+                    ? "mt-3 max-w-lg text-balance font-jp text-lg font-bold leading-snug text-ink/85"
+                    : "mt-3 max-w-lg text-balance font-body text-lg leading-snug text-ink/85"
                 }
               >
                 {t("home.tagline")}
               </h1>
-              <p className="mt-4 max-w-md text-base text-ink/90">
-                {t("home.subtitle")}
-              </p>
-              <div className="mt-7 flex flex-wrap gap-3">
+
+              <div className="mt-8 flex flex-wrap gap-3">
+                <a
+                  href={SITE.links.reserve}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="manga-panel-red bg-red px-5 py-2.5 font-display tracking-wide text-ink transition hover:-translate-y-0.5 hover:bg-red-dark"
+                >
+                  {t("home.reserveCta")}
+                </a>
                 <a
                   href={SITE.links.menu}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="manga-panel rounded bg-ink px-5 py-2 font-display tracking-wide text-void transition hover:-translate-y-0.5 hover:bg-neon"
+                  className="manga-panel bg-ink px-5 py-2.5 font-display tracking-wide text-void transition hover:-translate-y-0.5"
                 >
                   {t("home.menuCta")}
                 </a>
@@ -86,17 +110,9 @@ function HomeContent() {
                   href={SITE.links.order}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="manga-panel-red rounded bg-red px-5 py-2 font-display tracking-wide text-ink transition hover:-translate-y-0.5 hover:bg-red-dark"
+                  className="manga-panel bg-void/80 px-5 py-2.5 font-display tracking-wide text-ink backdrop-blur transition hover:-translate-y-0.5 hover:bg-ink hover:text-void"
                 >
                   {t("home.orderCta")}
-                </a>
-                <a
-                  href={SITE.links.reserve}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="manga-panel rounded bg-void/60 px-5 py-2 font-display tracking-wide text-ink backdrop-blur transition hover:-translate-y-0.5 hover:bg-ink hover:text-void"
-                >
-                  {t("home.reserveCta")}
                 </a>
               </div>
             </Reveal>
@@ -141,7 +157,7 @@ function HomeContent() {
                 </h2>
                 <Link
                   href="/events"
-                  className="font-display text-sm tracking-wide text-neon hover:underline"
+                  className="font-display text-sm tracking-wide text-ember hover:underline"
                 >
                   {t("home.viewFullCalendar")}
                 </Link>
@@ -154,11 +170,11 @@ function HomeContent() {
                   delay={i * 100}
                   className="sm:col-span-3 md:col-span-1"
                 >
-                  <div className="card-elevated rounded border-2 border-ink bg-card p-4">
+                  <div className="panel-card p-4">
                     <p className="font-display text-xl tracking-wide">
                       {locale === "ja" ? event.titleJa : event.title}
                     </p>
-                    <p className="mt-1 text-sm font-semibold text-neon">
+                    <p className="mt-1 text-sm font-semibold text-ember">
                       {locale === "ja" ? event.dateJa : event.date}
                     </p>
                     <p className="mt-2 text-sm leading-snug text-ink/70">
@@ -183,7 +199,7 @@ function HomeContent() {
               </h2>
               <Link
                 href="/blog"
-                className="font-display text-sm tracking-wide text-neon hover:underline"
+                className="font-display text-sm tracking-wide text-ember hover:underline"
               >
                 {t("home.viewAllArticles")}
               </Link>
@@ -194,7 +210,7 @@ function HomeContent() {
               <Reveal key={post.slug} delay={i * 100}>
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="card-elevated block rounded border-2 border-ink bg-card p-4"
+                  className="panel-card block p-4"
                 >
                   <p className="text-xs uppercase tracking-wide text-ink/50">
                     {formatDate(post.date)}

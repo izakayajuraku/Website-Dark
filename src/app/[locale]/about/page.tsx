@@ -41,7 +41,7 @@ export default async function AboutPage({
       <main className="flex-1">
         <section className="border-b-2 border-ink/80 bg-paper-dim/50">
           <div className="mx-auto max-w-3xl px-4 py-14 text-center sm:px-6">
-            <p className="font-jp text-sm tracking-widest text-neon">
+            <p className="font-jp text-sm tracking-widest text-ember">
               {t("about.pretitle")}
             </p>
             <h1 className="mt-2 font-display text-5xl tracking-wide sm:text-6xl">
@@ -70,7 +70,7 @@ export default async function AboutPage({
                   <p key={i}>{p}</p>
                 ))}
               </div>
-              <p className="mt-6 font-display text-xl tracking-wide text-neon">
+              <p className="mt-6 font-display text-xl tracking-wide text-ember">
                 {note.signoff}
               </p>
             </div>

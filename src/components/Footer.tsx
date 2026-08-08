@@ -10,13 +10,13 @@ export function Footer() {
     <footer className="border-t-2 border-ink/80 bg-void text-ink">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-3">
         <div>
-          <h3 className="font-display text-xl tracking-wide text-gold">
+          <h3 className="font-display text-xl tracking-wide text-ember">
             {t("footer.ourHome")}
           </h3>
           <p className="mt-3 text-sm leading-relaxed text-ink/85">
             {SITE.address}
             <br />
-            <a href={SITE.phoneHref} className="hover:text-gold">
+            <a href={SITE.phoneHref} className="hover:text-ember">
               {SITE.phone}
             </a>
           </p>
@@ -34,14 +34,14 @@ export function Footer() {
             href={SITE.links.directions}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 inline-block font-display text-sm tracking-wide text-gold underline underline-offset-4"
+            className="mt-4 inline-block font-display text-sm tracking-wide text-ember underline underline-offset-4"
           >
             {t("footer.getDirections")}
           </a>
         </div>
 
         <div>
-          <h3 className="font-display text-xl tracking-wide text-gold">
+          <h3 className="font-display text-xl tracking-wide text-ember">
             {t("footer.followTheGoodTimes")}
           </h3>
           <p className="mt-3 text-sm text-ink/70">{SITE.socialHandle}</p>
@@ -50,7 +50,7 @@ export function Footer() {
               href={SITE.links.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-gold"
+              className="hover:text-ember"
             >
               Instagram
             </a>
@@ -58,7 +58,7 @@ export function Footer() {
               href={SITE.links.tiktok}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-gold"
+              className="hover:text-ember"
             >
               TikTok
             </a>
@@ -66,7 +66,7 @@ export function Footer() {
               href={SITE.links.googleReviews}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-gold"
+              className="hover:text-ember"
             >
               Google
             </a>
@@ -74,7 +74,7 @@ export function Footer() {
               href={SITE.links.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-gold"
+              className="hover:text-ember"
             >
               WhatsApp
             </a>
@@ -83,14 +83,14 @@ export function Footer() {
             href={SITE.links.googleReviews}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 inline-block rounded-full border-2 border-gold px-4 py-1.5 font-display text-sm tracking-wide text-gold transition hover:bg-gold hover:text-ink"
+            className="mt-6 inline-block rounded-full border-2 border-gold px-4 py-1.5 font-display text-sm tracking-wide text-ember transition hover:bg-gold hover:text-ink"
           >
             {t("footer.writeAReview")}
           </a>
         </div>
 
         <div>
-          <h3 className="font-display text-xl tracking-wide text-gold">
+          <h3 className="font-display text-xl tracking-wide text-ember">
             {t("footer.orderAndRewards")}
           </h3>
           <ul className="mt-3 space-y-2 text-sm">
@@ -99,7 +99,7 @@ export function Footer() {
                 href={SITE.links.order}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-gold"
+                className="hover:text-ember"
               >
                 {t("footer.orderDirectNoFees")}
               </a>
@@ -109,7 +109,7 @@ export function Footer() {
                 href={SITE.links.giftCards}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-gold"
+                className="hover:text-ember"
               >
                 {t("nav.giftCards")}
               </a>
@@ -119,7 +119,7 @@ export function Footer() {
                 href={SITE.links.rewards}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-gold"
+                className="hover:text-ember"
               >
                 {t("nav.rewards")}
               </a>
@@ -127,12 +127,12 @@ export function Footer() {
           </ul>
           <ul className="mt-6 space-y-2 text-sm text-ink/70">
             <li>
-              <Link href="/collaborations" className="hover:text-gold">
+              <Link href="/collaborations" className="hover:text-ember">
                 {t("footer.community")}
               </Link>
             </li>
             <li>
-              <Link href="/faq" className="hover:text-gold">
+              <Link href="/faq" className="hover:text-ember">
                 {t("footer.faq")}
               </Link>
             </li>

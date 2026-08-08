@@ -8,15 +8,15 @@ export function Marquee({ items }: { items: string[] }) {
   const loop = [...baseSet, ...baseSet];
 
   return (
-    <div className="overflow-hidden border-y-2 border-ink/10 bg-void py-3">
+    <div className="overflow-hidden border-y-2 border-red bg-void py-3">
       <div className="marquee-track flex w-max gap-8">
         {loop.map((item, i) => (
           <span
             key={i}
-            className="font-display text-lg tracking-wide text-gold sm:text-xl"
+            className="font-display text-lg tracking-wide text-ink sm:text-xl"
           >
             {item}
-            <span aria-hidden className="ml-8 text-neon">
+            <span aria-hidden className="ml-8 text-ember">
               ●
             </span>
           </span>

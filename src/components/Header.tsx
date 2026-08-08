@@ -23,7 +23,7 @@ export function Header() {
             href={SITE.links.giftCards}
             target="_blank"
             rel="noopener noreferrer"
-            className="tracking-wide text-ink/80 hover:text-gold"
+            className="tracking-wide text-ink/80 hover:text-ember"
           >
             {t("nav.giftCards")}
           </a>
@@ -34,7 +34,7 @@ export function Header() {
             href={SITE.links.rewards}
             target="_blank"
             rel="noopener noreferrer"
-            className="tracking-wide text-ink/80 hover:text-gold"
+            className="tracking-wide text-ink/80 hover:text-ember"
           >
             {t("nav.rewards")}
           </a>
@@ -44,7 +44,7 @@ export function Header() {
           <button
             type="button"
             onClick={() => router.replace(pathname, { locale: otherLocale })}
-            className="tracking-wide text-ink/80 hover:text-gold"
+            className="tracking-wide text-ink/80 hover:text-ember"
           >
             {t("language.switchTo")}
           </button>
@@ -82,7 +82,7 @@ export function Header() {
                 href={tile.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-display text-lg tracking-wide text-ink/85 transition hover:text-neon"
+                className="font-display text-lg tracking-wide text-ink/85 transition hover:text-ember"
               >
                 {t(`nav.${tile.key}`)}
               </a>
@@ -90,7 +90,7 @@ export function Header() {
               <Link
                 key={tile.key}
                 href={tile.href}
-                className="font-display text-lg tracking-wide text-ink/85 transition hover:text-neon"
+                className="font-display text-lg tracking-wide text-ink/85 transition hover:text-ember"
               >
                 {t(`nav.${tile.key}`)}
               </Link>

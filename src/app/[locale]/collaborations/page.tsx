@@ -74,7 +74,7 @@ export default async function CollaborationsPage({
                   <p key={i}>{p}</p>
                 ))}
               </div>
-              <p className="mt-6 font-display text-xl tracking-wide text-neon">
+              <p className="mt-6 font-display text-xl tracking-wide text-ember">
                 {note.signoff}
               </p>
             </div>
@@ -111,7 +111,7 @@ export default async function CollaborationsPage({
                     </div>
                   )}
                   <div className="flex flex-1 flex-col p-6">
-                    <span className="inline-block w-fit rounded-full border border-red/40 bg-red/10 px-3 py-1 font-display text-xs tracking-wide text-neon">
+                    <span className="inline-block w-fit rounded-full border border-red/40 bg-red/10 px-3 py-1 font-display text-xs tracking-wide text-ember">
                       {isJa ? entry.categoryLabelJa : entry.categoryLabel}
                     </span>
                     <h2 className="mt-3 font-display text-2xl tracking-wide">
@@ -126,7 +126,7 @@ export default async function CollaborationsPage({
                         href={entry.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-neon underline underline-offset-4"
+                        className="text-ember underline underline-offset-4"
                       >
                         {entry.linkLabel ?? entry.link}
                       </a>
@@ -136,7 +136,7 @@ export default async function CollaborationsPage({
                         href={entry.instagram}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-neon underline underline-offset-4"
+                        className="text-ember underline underline-offset-4"
                       >
                         Instagram
                       </a>
@@ -144,7 +144,7 @@ export default async function CollaborationsPage({
                     {entry.internalHref && (
                       <Link
                         href={entry.internalHref}
-                        className="text-ink/70 underline underline-offset-4 hover:text-neon"
+                        className="text-ink/70 underline underline-offset-4 hover:text-ember"
                       >
                         {isJa ? entry.internalLabelJa : entry.internalLabel}
                       </Link>
@@ -166,7 +166,7 @@ export default async function CollaborationsPage({
             </p>
             <Link
               href="/faq"
-              className="mt-2 inline-block font-display text-sm tracking-wide text-neon hover:underline"
+              className="mt-2 inline-block font-display text-sm tracking-wide text-ember hover:underline"
             >
               {t("footer.faq")} →
             </Link>
