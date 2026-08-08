@@ -384,7 +384,7 @@ export default async function FaqPage({
       />
       <Header />
       <main className="flex-1">
-        <section className="border-b-2 border-ink/80 bg-paper-dim/50">
+        <section className="border-b-2 border-ink/15 bg-paper-dim/50">
           <div className="mx-auto max-w-3xl px-4 py-14 text-center sm:px-6">
             <h1 className="font-display text-5xl tracking-wide sm:text-6xl">
               {title}
@@ -404,7 +404,7 @@ export default async function FaqPage({
                     </span>
                     {item.q}
                   </summary>
-                  <div className="mt-3 text-sm leading-relaxed text-ink/80">
+                  <div className="mt-3 text-base leading-relaxed text-ink/85">
                     {item.a}
                   </div>
                 </details>

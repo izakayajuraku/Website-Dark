@@ -54,7 +54,7 @@ export default async function BlogIndexPage({
     <>
       <Header />
       <main className="flex-1">
-        <section className="border-b-2 border-ink/80 bg-paper-dim/50">
+        <section className="border-b-2 border-ink/15 bg-paper-dim/50">
           <div className="mx-auto max-w-3xl px-4 py-14 text-center sm:px-6">
             <p className="font-jp text-sm tracking-widest text-ember">
               {t("blog.pretitle")}
@@ -71,7 +71,7 @@ export default async function BlogIndexPage({
             <p className="font-display text-2xl tracking-wide text-ink">
               {t("blog.newsletterHeading")}
             </p>
-            <p className="mt-2 text-sm text-ink/70">
+            <p className="mt-2 text-[0.9375rem] leading-relaxed text-ink/80">
               {t("blog.newsletterSubtitle")}
             </p>
             <a

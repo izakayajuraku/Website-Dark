@@ -24,10 +24,19 @@ export async function generateMetadata({
       };
 }
 
-const photos = Array.from(
-  { length: 10 },
-  (_, i) => `/images/gallery/event-${i + 1}.jpg`,
-);
+// Listed explicitly rather than generated from a count: the generated version
+// silently included two images that were byte-identical duplicates of others.
+// Add new photos here so the set stays visible and reviewable.
+const photos = [
+  "/images/gallery/event-1.jpg",
+  "/images/gallery/event-2.jpg",
+  "/images/gallery/event-3.jpg",
+  "/images/gallery/event-4.jpg",
+  "/images/gallery/event-5.jpg",
+  "/images/gallery/event-6.jpg",
+  "/images/gallery/event-7.jpg",
+  "/images/gallery/event-8.jpg",
+];
 
 export default async function GalleryPage({
   params,
@@ -42,7 +51,7 @@ export default async function GalleryPage({
     <>
       <Header />
       <main className="flex-1">
-        <section className="border-b-2 border-ink/80 bg-paper-dim/50">
+        <section className="border-b-2 border-ink/15 bg-paper-dim/50">
           <div className="mx-auto max-w-3xl px-4 py-14 text-center sm:px-6">
             <p className="font-jp text-sm tracking-widest text-ember">
               {t("gallery.pretitle")}

@@ -16,7 +16,7 @@ export function Header() {
   const otherLocale = locale === "en" ? "ja" : "en";
 
   return (
-    <header className="sticky top-0 z-40 border-b-2 border-ink/80 bg-paper/95 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b-2 border-red bg-paper/95 backdrop-blur">
       <div className="border-b border-ink/10 bg-void text-ink">
         <div className="mx-auto flex max-w-6xl items-center justify-end gap-4 px-4 py-1.5 text-xs sm:px-6">
           <a
@@ -136,7 +136,7 @@ export function Header() {
       </div>
 
       {open && (
-        <nav className="border-t-2 border-ink/80 bg-paper md:hidden">
+        <nav className="border-t-2 border-ink/15 bg-paper md:hidden">
           <div className="mx-auto flex max-w-6xl gap-2 px-4 pt-3 sm:px-6">
             <a
               href={SITE.links.reserve}
@@ -160,7 +160,7 @@ export function Header() {
                     className="block border-b border-ink/10 py-3 font-display text-xl tracking-wide text-ink"
                   >
                     {t(`nav.${tile.key}`)}
-                    <span className="ml-2 font-jp text-sm text-ink/40">
+                    <span className="ml-2 font-jp text-sm text-ink/60">
                       {locale === "ja" ? tile.en : tile.ja}
                     </span>
                   </a>
@@ -171,7 +171,7 @@ export function Header() {
                     className="block border-b border-ink/10 py-3 font-display text-xl tracking-wide text-ink"
                   >
                     {t(`nav.${tile.key}`)}
-                    <span className="ml-2 font-jp text-sm text-ink/40">
+                    <span className="ml-2 font-jp text-sm text-ink/60">
                       {locale === "ja" ? tile.en : tile.ja}
                     </span>
                   </Link>

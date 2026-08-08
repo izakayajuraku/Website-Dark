@@ -49,7 +49,24 @@ export function formatDate(isoDate: string) {
 // whichever language ISN'T the page's primary language — e.g. an English
 // page shows "Menu" as the label with a small "メニュー" accent, and the
 // Japanese page flips that around.
-export const NAV_TILES = [
+//
+// `lantern` is the artist-supplied chochin illustration for each destination.
+// Leave it unset until the real asset exists — ScrollTile falls back to a
+// plain placeholder panel. Add the transparent PNG path (e.g.
+// "/images/lanterns/menu.png") and the tile renders the art automatically,
+// with the label/blurb still live HTML on top rather than baked into the art.
+export type NavTile = {
+  key: string;
+  en: string;
+  ja: string;
+  href: string;
+  external: boolean;
+  blurbEn: string;
+  blurbJa: string;
+  lantern?: string;
+};
+
+export const NAV_TILES: NavTile[] = [
   {
     key: "menu",
     en: "Menu",

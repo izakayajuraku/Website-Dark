@@ -7,13 +7,13 @@ export function Footer() {
   const locale = useLocale();
 
   return (
-    <footer className="border-t-2 border-ink/80 bg-void text-ink">
+    <footer className="border-t-4 border-red bg-void text-ink">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-3">
         <div>
           <h3 className="font-display text-xl tracking-wide text-ember">
             {t("footer.ourHome")}
           </h3>
-          <p className="mt-3 text-sm leading-relaxed text-ink/85">
+          <p className="mt-3 text-[0.9375rem] leading-relaxed text-ink/85">
             {SITE.address}
             <br />
             <a href={SITE.phoneHref} className="hover:text-ember">

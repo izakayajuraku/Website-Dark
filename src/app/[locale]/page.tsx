@@ -6,10 +6,26 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ScrollTile } from "@/components/ScrollTile";
 import { Reveal } from "@/components/Reveal";
-import { Marquee } from "@/components/Marquee";
 import { NAV_TILES, SITE, formatDate } from "@/lib/site";
 import { getAllPosts } from "@/lib/blog";
 import { events, recurringEvents } from "@/lib/data/events";
+
+/* Hero artwork slots. Both are supplied by the artist as separate assets so
+   they can be composed and scaled independently — do not merge them into one
+   flattened image, and do not bake any text into either. */
+const HERO_BACKGROUND = {
+  src: "/images/hero-yukata-neon.jpg",
+  alt: "Guests in yukata walking past Izakaya Juraku's neon-lit storefront on Ludlow Street at night",
+};
+
+/* Set this once the transparent Momo-chan-with-sign asset exists, e.g.
+   { src: "/images/momochan-sign.png", alt: "", width: 900, height: 1200 } */
+const HERO_MOMOCHAN: {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+} | null = null;
 
 export default async function Home({
   params,
@@ -31,12 +47,18 @@ function HomeContent() {
     <>
       <Header />
       <main className="flex-1">
-        {/* Hero — poster composition: hard black frame, heavy left scrim so
-            type never rides raw photography, brand lockup as the focal point. */}
+        {/* Hero — poster composition: hard black frame, heavy scrim so type
+            never rides raw photography, brand lockup as the focal point.
+
+            The storefront and Momo-chan are deliberately SEPARATE layers.
+            When the artist's manga storefront lands, swap HERO_BACKGROUND
+            below; when Momo-chan-with-sign lands, set HERO_MOMOCHAN and she
+            renders as her own responsively-positioned layer on top, so she
+            can scale and reposition independently of the background. */}
         <section className="relative min-h-[600px] overflow-hidden border-b-4 border-red bg-void sm:min-h-[680px]">
           <Image
-            src="/images/hero-yukata-neon.jpg"
-            alt="Guests in yukata walking past Izakaya Juraku's neon-lit storefront on Ludlow Street at night"
+            src={HERO_BACKGROUND.src}
+            alt={HERO_BACKGROUND.alt}
             fill
             sizes="100vw"
             priority
@@ -48,6 +70,19 @@ function HomeContent() {
             className="absolute inset-0 bg-gradient-to-t from-void via-transparent to-void/70"
           />
           <div aria-hidden className="screentone absolute inset-0" />
+
+          {HERO_MOMOCHAN && (
+            <div className="pointer-events-none absolute bottom-0 right-0 z-10 w-40 origin-bottom-right sm:w-56 lg:w-72">
+              <Image
+                src={HERO_MOMOCHAN.src}
+                alt={HERO_MOMOCHAN.alt}
+                width={HERO_MOMOCHAN.width}
+                height={HERO_MOMOCHAN.height}
+                priority
+                className="h-auto w-full"
+              />
+            </div>
+          )}
 
           <div className="relative mx-auto flex min-h-[600px] max-w-6xl items-center px-4 py-24 sm:px-6 md:min-h-[680px]">
             <Reveal className="max-w-2xl">
@@ -119,22 +154,17 @@ function HomeContent() {
           </div>
         </section>
 
-        <Marquee
-          items={
-            locale === "ja"
-              ? ["good food", "good people", "good times"]
-              : ["GOOD FOOD", "GOOD PEOPLE", "GOOD TIMES"]
-          }
-        />
-
-        {/* Scroll tiles nav */}
-        <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+        {/* The six exploratory destinations. Placed immediately after the
+            hero — a marquee used to sit here, but it only repeated the hero's
+            own kicker line and pushed navigation further down the page. */}
+        <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16">
           <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6">
             {NAV_TILES.map((tile, i) => (
               <Reveal key={tile.key} delay={i * 80}>
                 <ScrollTile
                   href={tile.href}
                   external={tile.external}
+                  lantern={tile.lantern}
                   label={locale === "ja" ? tile.ja : tile.en}
                   jp={locale === "ja" ? tile.en : tile.ja}
                   blurb={locale === "ja" ? tile.blurbJa : tile.blurbEn}
@@ -145,7 +175,7 @@ function HomeContent() {
         </section>
 
         {/* Upcoming events */}
-        <section className="border-y-2 border-ink/80 bg-paper-dim/60">
+        <section className="border-y-2 border-ink/15 bg-paper-dim/60">
           <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
             <Reveal>
               <div className="flex items-baseline justify-between">
@@ -177,7 +207,7 @@ function HomeContent() {
                     <p className="mt-1 text-sm font-semibold text-ember">
                       {locale === "ja" ? event.dateJa : event.date}
                     </p>
-                    <p className="mt-2 text-sm leading-snug text-ink/70">
+                    <p className="mt-2 text-[0.9375rem] leading-relaxed text-ink/80">
                       {locale === "ja" ? event.detailJa : event.detail}
                     </p>
                   </div>

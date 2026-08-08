@@ -85,70 +85,81 @@ export default async function CollaborationsPage({
           <div className="grid gap-6 sm:grid-cols-2">
             {communityEntries.map((entry, i) => (
               <Reveal key={entry.slug} delay={Math.min(i, 6) * 70}>
-                <div className="manga-panel flex h-full flex-col overflow-hidden rounded bg-card">
-                  {entry.photo ? (
-                    <div className="relative h-40 w-full">
-                      <Image
-                        src={entry.photo}
-                        alt={entry.photoAlt ?? ""}
-                        fill
-                        sizes="(max-width: 640px) 100vw, 50vw"
-                        className="object-cover"
-                      />
+                <div className="panel-card flex h-full flex-col overflow-hidden">
+                  {/* Every card gets a header band of the same height, so a
+                      mixed set of photo / no-photo entries still reads as one
+                      deliberate grid. Entries without a photo get a
+                      typographic nameplate rather than a washed-out initial. */}
+                  <div className="relative h-40 w-full shrink-0 overflow-hidden bg-void">
+                    {entry.photo ? (
+                      <>
+                        <Image
+                          src={entry.photo}
+                          alt={entry.photoAlt ?? ""}
+                          fill
+                          sizes="(max-width: 640px) 100vw, 50vw"
+                          className="object-cover"
+                        />
+                        <div
+                          aria-hidden
+                          className="absolute inset-0 bg-gradient-to-t from-void via-void/25 to-transparent"
+                        />
+                      </>
+                    ) : (
                       <div
                         aria-hidden
-                        className="absolute inset-0 bg-gradient-to-t from-void/70 via-transparent to-transparent"
-                      />
-                    </div>
-                  ) : (
-                    <div className="screentone relative flex h-24 w-full items-center justify-center overflow-hidden bg-void">
-                      <span
-                        aria-hidden
-                        className="select-none font-display text-7xl tracking-wide text-ink/10"
+                        className="screentone flex h-full w-full flex-col items-center justify-center px-4 text-center"
                       >
-                        {entry.name.charAt(0)}
-                      </span>
-                    </div>
-                  )}
+                        <span className="font-jp text-2xl leading-tight text-ember">
+                          {entry.categoryLabelJa}
+                        </span>
+                        <span className="mt-2 h-px w-10 bg-red" />
+                        <span className="mt-2 font-display text-xs tracking-[0.22em] text-ink/70">
+                          {entry.categoryLabel.toUpperCase()}
+                        </span>
+                      </div>
+                    )}
+                  </div>
+
                   <div className="flex flex-1 flex-col p-6">
-                    <span className="inline-block w-fit rounded-full border border-red/40 bg-red/10 px-3 py-1 font-display text-xs tracking-wide text-ember">
+                    <span className="inline-block w-fit border border-red bg-red/15 px-3 py-1 font-display text-xs tracking-wide text-ember">
                       {isJa ? entry.categoryLabelJa : entry.categoryLabel}
                     </span>
-                    <h2 className="mt-3 font-display text-2xl tracking-wide">
+                    <h2 className="mt-3 font-display text-2xl leading-tight tracking-wide">
                       {entry.name}
                     </h2>
-                    <p className="mt-3 flex-1 text-sm leading-relaxed text-ink/80">
+                    <p className="mt-3 flex-1 text-[0.9375rem] leading-relaxed text-ink/85">
                       {isJa ? entry.blurbJa : entry.blurb}
                     </p>
-                    <div className="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-sm">
-                    {entry.link && (
-                      <a
-                        href={entry.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-ember underline underline-offset-4"
-                      >
-                        {entry.linkLabel ?? entry.link}
-                      </a>
-                    )}
-                    {entry.instagram && entry.link !== entry.instagram && (
-                      <a
-                        href={entry.instagram}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-ember underline underline-offset-4"
-                      >
-                        Instagram
-                      </a>
-                    )}
-                    {entry.internalHref && (
-                      <Link
-                        href={entry.internalHref}
-                        className="text-ink/70 underline underline-offset-4 hover:text-ember"
-                      >
-                        {isJa ? entry.internalLabelJa : entry.internalLabel}
-                      </Link>
-                    )}
+                    <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-ink/15 pt-4 text-sm">
+                      {entry.link && (
+                        <a
+                          href={entry.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-display tracking-wide text-ember underline underline-offset-4 hover:text-ink"
+                        >
+                          {entry.linkLabel ?? entry.link}
+                        </a>
+                      )}
+                      {entry.instagram && entry.link !== entry.instagram && (
+                        <a
+                          href={entry.instagram}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-display tracking-wide text-ember underline underline-offset-4 hover:text-ink"
+                        >
+                          Instagram
+                        </a>
+                      )}
+                      {entry.internalHref && (
+                        <Link
+                          href={entry.internalHref}
+                          className="text-ink/75 underline underline-offset-4 hover:text-ember"
+                        >
+                          {isJa ? entry.internalLabelJa : entry.internalLabel}
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -157,7 +168,7 @@ export default async function CollaborationsPage({
           </div>
         </section>
 
-        <section className="border-t-2 border-ink/80 bg-paper-dim/50">
+        <section className="border-t-2 border-ink/15 bg-paper-dim/50">
           <div className="mx-auto max-w-2xl px-4 py-12 text-center sm:px-6">
             <p className="text-sm text-ink/70">
               {isJa

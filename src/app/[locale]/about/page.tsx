@@ -39,7 +39,7 @@ export default async function AboutPage({
     <>
       <Header />
       <main className="flex-1">
-        <section className="border-b-2 border-ink/80 bg-paper-dim/50">
+        <section className="border-b-2 border-ink/15 bg-paper-dim/50">
           <div className="mx-auto max-w-3xl px-4 py-14 text-center sm:px-6">
             <p className="font-jp text-sm tracking-widest text-ember">
               {t("about.pretitle")}

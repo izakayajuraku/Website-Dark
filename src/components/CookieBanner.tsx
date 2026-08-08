@@ -21,7 +21,7 @@ export function CookieBanner() {
   if (!visible) return null;
 
   return (
-    <div className="fixed inset-x-0 bottom-0 z-50 border-t-2 border-ink/80 bg-void text-ink">
+    <div className="fixed inset-x-0 bottom-0 z-50 border-t-2 border-red bg-void text-ink">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-3 sm:px-6">
         <p className="text-sm text-ink/80">{t("cookies.message")}</p>
         <button
