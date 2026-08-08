@@ -39,8 +39,11 @@ export const communityEntries: CommunityEntry[] = [
     internalLabel: "Read her story on our blog",
     internalLabelJa: "ブログで彼女の物語を読む",
     photo: "/images/community-miyo-belts.jpg",
+    // Her daughter is in frame. Described by relationship rather than by
+    // name: naming a child in public alt text isn't something to do by
+    // default, and the relationship is the meaningful part anyway.
     photoAlt:
-      "Miyo Yoshida with her world championship belts, alongside a young supporter",
+      "Miyo Yoshida with her world championship belts, her daughter beside her",
   },
   {
     slug: "tenten-nyc",
