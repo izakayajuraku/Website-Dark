@@ -43,7 +43,6 @@ export default async function AboutPage({
         <PageHeader
           pretitle={t("about.pretitle")}
           title={t("about.title")}
-          mark="聚楽"
         />
 
         <section className="mx-auto max-w-3xl px-4 py-14 sm:px-6">

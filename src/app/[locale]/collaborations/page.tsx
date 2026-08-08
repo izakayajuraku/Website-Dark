@@ -48,7 +48,6 @@ export default async function CollaborationsPage({
           title={
             isJa ? "コミュニティ＆コラボレーション" : "Community & Collaborations"
           }
-          mark="縁"
         >
           {isJa
             ? "ジュラクは近所のお店であると同時に、アーティスト、アスリート、地域コミュニティのハブでもありたいと思っています。私たちが応援している、そして応援してもらっている人たちをご紹介します。"

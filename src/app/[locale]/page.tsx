@@ -56,14 +56,14 @@ function HomeContent() {
             below; when Momo-chan-with-sign lands, set HERO_MOMOCHAN and she
             renders as her own responsively-positioned layer on top, so she
             can scale and reposition independently of the background. */}
-        <section className="relative min-h-[600px] overflow-hidden border-b-4 border-red bg-void sm:min-h-[680px]">
+        <section className="relative min-h-[500px] overflow-hidden border-b-4 border-red bg-void sm:min-h-[560px]">
           <Image
             src={HERO_BACKGROUND.src}
             alt={HERO_BACKGROUND.alt}
             fill
             sizes="100vw"
             priority
-            className="object-cover object-[62%_38%]"
+            className="object-cover object-[62%_30%]"
           />
           <div aria-hidden className="scrim-left absolute inset-0" />
           <div
@@ -85,10 +85,9 @@ function HomeContent() {
             </div>
           )}
 
-          <div className="relative mx-auto flex min-h-[600px] max-w-6xl items-center px-4 py-24 sm:px-6 md:min-h-[680px]">
+          <div className="relative mx-auto flex min-h-[500px] max-w-6xl items-start px-4 pb-12 pt-10 sm:px-6 sm:pb-16 sm:pt-14 md:min-h-[560px]">
             <Reveal className="w-full max-w-2xl">
-              <p className="flex items-center gap-3 font-display text-xs tracking-[0.24em] text-ink/85">
-                <span aria-hidden className="h-px w-8 shrink-0 bg-red" />
+              <p className="font-display text-xs tracking-[0.24em] text-ink/85">
                 {locale === "ja"
                   ? "ロウアー・イーストサイド, NYC"
                   : "LOWER EAST SIDE, NYC"}

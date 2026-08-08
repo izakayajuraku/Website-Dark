@@ -385,7 +385,7 @@ export default async function FaqPage({
       />
       <Header />
       <main className="flex-1">
-        <PageHeader title={title} mark="問">
+        <PageHeader title={title}>
           {subtitle}
         </PageHeader>
 

@@ -2,6 +2,16 @@ import Image from "next/image";
 import type { ReactNode } from "react";
 
 /**
+ * Shared artwork behind every interior page header. Pass `image` on an
+ * individual page to override it, or `image={null}` to fall back to the
+ * kanji watermark instead.
+ */
+const DEFAULT_HEADER_IMAGE = {
+  src: "/images/yokai-matcha-bomb.png",
+  alt: "",
+};
+
+/**
  * Shared header band for interior pages.
  *
  * The home page carries the site's one big expressive moment; these headers
@@ -28,17 +38,19 @@ export function PageHeader({
    * stacking a separate full-width image band above the header — one visual
    * moment per page, not two. The watermark is dropped when an image is set.
    */
-  image?: { src: string; alt?: string };
+  image?: { src: string; alt?: string } | null;
   /** Optional lede paragraph under the title. */
   children?: ReactNode;
 }) {
+  const art = image === undefined ? DEFAULT_HEADER_IMAGE : image;
+
   return (
     <section className="page-header">
-      {image ? (
+      {art ? (
         <>
           <Image
-            src={image.src}
-            alt={image.alt ?? ""}
+            src={art.src}
+            alt={art.alt ?? ""}
             fill
             sizes="100vw"
             priority
@@ -57,21 +69,20 @@ export function PageHeader({
       <div aria-hidden className="page-header-glow" />
       <div aria-hidden className="screentone absolute inset-0" />
 
-      <div className="relative mx-auto max-w-3xl px-4 py-16 text-center sm:px-6 sm:py-20">
+      <div className="relative mx-auto max-w-3xl px-4 py-9 text-center sm:px-6 sm:py-11">
         {pretitle && (
           <p className="font-display text-xs tracking-[0.28em] text-ember">
             {pretitle}
           </p>
         )}
-        <h1 className="mt-3 font-display text-4xl leading-[1.05] tracking-wide text-ink sm:text-5xl md:text-6xl">
+        <h1 className="mt-2 font-display text-3xl leading-[1.05] tracking-wide text-ink sm:text-4xl md:text-5xl">
           {title}
         </h1>
-        <span
-          aria-hidden
-          className="mx-auto mt-5 block h-[3px] w-14 bg-red"
-        />
+        <span aria-hidden className="mx-auto mt-4 block h-[3px] w-12 bg-red" />
         {children && (
-          <div className="mx-auto mt-5 max-w-xl text-ink/85">{children}</div>
+          <div className="mx-auto mt-4 max-w-xl text-[0.9375rem] text-ink/85">
+            {children}
+          </div>
         )}
       </div>
     </section>

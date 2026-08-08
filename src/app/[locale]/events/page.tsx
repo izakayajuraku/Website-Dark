@@ -40,16 +40,9 @@ export default async function EventsPage({
     <>
       <Header />
       <main className="flex-1">
-        {/* The yokai art is the header's background rather than a separate
-            full-width band above it — stacking both made the top of the page
-            two competing visual moments. */}
         <PageHeader
           pretitle={t("events.pretitle")}
           title={t("events.title")}
-          image={{
-            src: "/images/yokai-matcha-bomb.png",
-            alt: "Yokai characters raising matcha sake bomb glasses at Izakaya Juraku",
-          }}
         >
           {t("events.followFor")}{" "}
           <a

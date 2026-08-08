@@ -55,7 +55,6 @@ export default async function GalleryPage({
         <PageHeader
           pretitle={t("gallery.pretitle")}
           title={t("gallery.title")}
-          mark="夜"
         >
           {t("gallery.tagPrefix")}{" "}
           <a

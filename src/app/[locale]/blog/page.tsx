@@ -58,7 +58,6 @@ export default async function BlogIndexPage({
         <PageHeader
           pretitle={t("blog.pretitle")}
           title={t("blog.title")}
-          mark="話"
         >
           {t("blog.subtitle")}
         </PageHeader>
