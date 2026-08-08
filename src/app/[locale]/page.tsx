@@ -123,7 +123,10 @@ function HomeContent() {
                 {t("home.tagline")}
               </h1>
 
-              <div className="mt-9 flex flex-col gap-3 sm:gap-4">
+              {/* Tight gap on purpose: each plate PNG already carries ~5px of
+                  transparent padding top and bottom at render size, so the
+                  visible spacing is roughly double whatever is set here. */}
+              <div className="mt-9 flex flex-col gap-1 sm:gap-1.5">
                 <PlateButton
                   href={SITE.links.reserve}
                   label={t("home.reserveCta")}
