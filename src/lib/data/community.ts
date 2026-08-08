@@ -141,6 +141,29 @@ export const communityEntries: CommunityEntry[] = [
     linkLabel: "cpc-nyc.org",
   },
   {
+    // Temple facts (1938, Rev. Hozen Seki, Jodo Shinshu, the Shinran Shonin
+    // bronze that survived Hiroshima) are from the temple's own history and
+    // press. The relationship is per Juraku: David runs it and is a friend
+    // and regular, Karl of KarlsBalls works there, and the Bon Odori is the
+    // first thing the two have done together.
+    // CHECK AFTER AUG 9 2026: confirm the Bon Odori went ahead as planned
+    // before launch, and swap in a photo from the day if there is one.
+    slug: "new-york-buddhist-church",
+    name: "New York Buddhist Church",
+    category: "community",
+    categoryLabel: "Neighborhood Temple",
+    categoryLabelJa: "地域のお寺",
+    blurb:
+      "A Jodo Shinshu temple on Riverside Drive, founded in 1938 by Rev. Hozen Seki. The bronze Shinran Shonin standing outside survived the bombing of Hiroshima, and has been a quiet symbol of peace on the Upper West Side ever since.\n\nDavid, who runs it, is a friend and a regular, and Karl of KarlsBalls works there. Their summer Bon Odori is the first thing we've come together on.",
+    blurbJa:
+      "1938年にHozen Seki師が創建した、リバーサイド・ドライブの浄土真宗寺院。門前に立つ親鸞聖人の銅像は広島の原爆を耐え抜いたもので、以来アッパー・ウエスト・サイドで静かに平和を象徴し続けています。\n\n寺を運営するデイヴィッドはジュラクの常連であり友人。KarlsBallsのカール氏もここで働いています。夏の盆踊りが、私たちが初めて一緒に取り組むイベントです。",
+    link: "https://www.newyorkbuddhistchurch.org/",
+    linkLabel: "newyorkbuddhistchurch.org",
+    internalHref: "/events",
+    internalLabel: "See the Bon Odori",
+    internalLabelJa: "盆踊りの詳細を見る",
+  },
+  {
     slug: "chichi-cecilia-gault",
     name: "ChiChi (Cecilia Gault)",
     category: "collab",
@@ -201,6 +224,24 @@ export const communityEntries: CommunityEntry[] = [
     link: "https://www.brotakulive.com/",
     linkLabel: "brotakulive.com",
     instagram: "https://www.instagram.com/brotakuofficial",
+  },
+  {
+    // Placed next to Brotaku, which already names KarlsBalls as the other
+    // sponsor. Business facts (Konamon Association recognition, the kei tora
+    // truck) are from KarlsBalls' own site; the co-sponsorship is per Juraku
+    // and already stated in the Brotaku entry.
+    slug: "karlsballs",
+    name: "KarlsBalls Takoyaki",
+    category: "collab",
+    categoryLabel: "Fellow Sponsor",
+    categoryLabelJa: "共同スポンサー",
+    blurb:
+      "Osaka-style takoyaki, made from scratch at every event by Karl Palma and his crew. They're the only takoyaki business outside Japan recognized by the Japan Konamon Association, and they run a kei tora kitchen truck, the only one of its kind in the country. Karl sponsors Brotaku alongside us.",
+    blurbJa:
+      "カール・パルマ氏とそのチームが、イベントごとに一から作り上げる大阪スタイルのたこ焼き。日本国外で唯一、日本コナモン協会に認定されたたこ焼き店であり、全米でただ一台の軽トラキッチンカーで出店しています。Brotakuではジュラクとともにスポンサーを務めています。",
+    link: "https://www.karlsballs.com/",
+    linkLabel: "karlsballs.com",
+    instagram: "https://www.instagram.com/karlsballs/",
   },
   {
     slug: "close-the-door-behind-you",

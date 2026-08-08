@@ -127,7 +127,7 @@ export function Footer() {
           </ul>
           <ul className="mt-6 space-y-2 text-sm text-ink/70">
             <li>
-              <Link href="/collaborations" className="hover:text-ember">
+              <Link href="/community" className="hover:text-ember">
                 {t("footer.community")}
               </Link>
             </li>

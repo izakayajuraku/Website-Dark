@@ -116,7 +116,7 @@ export const NAV_TILES: NavTile[] = [
     key: "community",
     en: "Community",
     ja: "コミュニティ",
-    href: "/collaborations",
+    href: "/community",
     external: false,
     blurbEn: "Sponsorships, collabs & friends",
     blurbJa: "スポンサー・コラボ・仲間たち",

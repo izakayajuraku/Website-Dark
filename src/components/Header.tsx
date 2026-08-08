@@ -18,29 +18,10 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b-2 border-red bg-paper/95 backdrop-blur">
       <div className="border-b border-ink/10 bg-void text-ink">
-        <div className="mx-auto flex max-w-6xl items-center justify-end gap-4 px-4 py-1.5 text-xs sm:px-6">
-          <a
-            href={SITE.links.giftCards}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="tracking-wide text-ink/80 hover:text-ember"
-          >
-            {t("nav.giftCards")}
-          </a>
-          <span aria-hidden className="text-ink/30">
-            ·
-          </span>
-          <a
-            href={SITE.links.rewards}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="tracking-wide text-ink/80 hover:text-ember"
-          >
-            {t("nav.rewards")}
-          </a>
-          <span aria-hidden className="text-ink/30">
-            ·
-          </span>
+        {/* Utility strip is now the language toggle alone — Gift Cards and
+            Rewards moved down into the main nav row with the other
+            destinations. */}
+        <div className="mx-auto flex max-w-6xl items-center justify-end px-4 py-1.5 text-xs sm:px-6">
           <button
             type="button"
             onClick={() => router.replace(pathname, { locale: otherLocale })}
@@ -98,6 +79,28 @@ export function Header() {
               </Link>
             ),
           )}
+
+          {/* Gift Cards and Rewards live here now rather than in the utility
+              strip, but at secondary weight so the six primary destinations
+              keep their hierarchy. Held back to lg: at md the six already
+              fill the row. */}
+          <span aria-hidden className="hidden h-4 w-px bg-ink/25 lg:block" />
+          <a
+            href={SITE.links.giftCards}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden text-sm tracking-wide text-ink/70 transition hover:text-ember lg:block"
+          >
+            {t("nav.giftCards")}
+          </a>
+          <a
+            href={SITE.links.rewards}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden text-sm tracking-wide text-ink/70 transition hover:text-ember lg:block"
+          >
+            {t("nav.rewards")}
+          </a>
         </nav>
 
         <div className="flex items-center gap-2">

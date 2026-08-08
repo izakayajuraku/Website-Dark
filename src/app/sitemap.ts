@@ -9,7 +9,7 @@ const STATIC_PATHS = [
   "/gallery",
   "/about",
   "/faq",
-  "/collaborations",
+  "/community",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
