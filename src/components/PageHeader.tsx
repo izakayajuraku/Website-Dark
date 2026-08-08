@@ -70,8 +70,11 @@ export function PageHeader({
       <div aria-hidden className="screentone absolute inset-0" />
 
       <div className="relative mx-auto max-w-3xl px-4 py-9 text-center sm:px-6 sm:py-11">
+        {/* The pretitle is Japanese on every page, in both locales, so it
+            needs the JP face — the Latin display font has no kana or kanji
+            and silently falls back to whatever the OS provides. */}
         {pretitle && (
-          <p className="font-display text-xs tracking-[0.28em] text-ember">
+          <p className="font-jp text-sm tracking-widest text-ember">
             {pretitle}
           </p>
         )}

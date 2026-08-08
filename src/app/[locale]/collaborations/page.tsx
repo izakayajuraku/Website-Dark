@@ -44,7 +44,7 @@ export default async function CollaborationsPage({
       <Header />
       <main className="flex-1">
         <PageHeader
-          pretitle={isJa ? "コミュニティ" : "COMMUNITY"}
+          pretitle="コミュニティ"
           title={
             isJa ? "コミュニティ＆コラボレーション" : "Community & Collaborations"
           }

@@ -385,7 +385,7 @@ export default async function FaqPage({
       />
       <Header />
       <main className="flex-1">
-        <PageHeader title={title}>
+        <PageHeader pretitle="よくある質問" title={title}>
           {subtitle}
         </PageHeader>
 
