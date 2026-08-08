@@ -128,9 +128,15 @@ export default async function CollaborationsPage({
                     <h2 className="mt-3 font-display text-2xl leading-tight tracking-wide">
                       {entry.name}
                     </h2>
-                    <p className="mt-3 flex-1 text-[0.9375rem] leading-relaxed text-ink/85">
-                      {isJa ? entry.blurbJa : entry.blurb}
-                    </p>
+                    {/* Blank lines in a blurb become real paragraphs, so a
+                        longer entry reads as prose rather than one block. */}
+                    <div className="mt-3 flex-1 space-y-3 text-[0.9375rem] leading-relaxed text-ink/85">
+                      {(isJa ? entry.blurbJa : entry.blurb)
+                        .split("\n\n")
+                        .map((para, pi) => (
+                          <p key={pi}>{para}</p>
+                        ))}
+                    </div>
                     <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-ink/15 pt-4 text-sm">
                       {entry.link && (
                         <a

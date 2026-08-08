@@ -8,6 +8,7 @@ export type CommunityEntry = {
   category: "sponsorship" | "collab" | "community";
   categoryLabel: string;
   categoryLabelJa: string;
+  /** A blank line (\n\n) splits the blurb into separate paragraphs. */
   blurb: string;
   blurbJa: string;
   link?: string;
@@ -110,9 +111,9 @@ export const communityEntries: CommunityEntry[] = [
     categoryLabel: "Our Go-To Artist",
     categoryLabelJa: "専属アーティスト",
     blurb:
-      "Our go-to artist for commission work for 5+ years and counting. Every piece of illustration you see across the Juraku brand, from Momochan to the sticker art to the samurai and yokai series, started as a commission with Abigail.",
+      "Abigail has been one of Juraku's favorite artists and collaborators for years. Much of the artwork behind our visual identity is hers: the Matcha Sake Bomb illustrations, the Shake Shake Fries bag art, the stickers, and plenty more you'll spot around the restaurant. More than an artist, she's become a longtime friend of Juraku.\n\nShe takes commission work and can create in a wide range of styles. These days she works extensively in children's book illustration, bringing the same warmth, personality, and attention to detail we've always loved in her work for us.",
     blurbJa:
-      "5年以上にわたり、コミッション作品を依頼し続けているジュラクの専属アーティスト。モモちゃんをはじめ、ステッカーアート、侍・妖怪シリーズなど、ジュラクブランドのイラストはすべて彼女に依頼して生まれたものです。",
+      "アビゲイルは長年にわたり、ジュラクがもっとも大切にしているアーティストでありコラボレーターです。抹茶サケボムのイラスト、シェイクシェイクフライのバッグアート、ステッカーなど、ジュラクのビジュアルを形づくるアートワークの多くは彼女の手によるもの。アーティストであると同時に、ジュラクの長年の友人でもあります。\n\nコミッションワークも受け付けており、幅広いスタイルに対応可能です。現在は絵本のイラストレーションを中心に活動し、ジュラクの作品で私たちが惹かれてきた温かみ、個性、細部へのこだわりを、そのまま注ぎ込んでいます。",
     link: "https://www.instagram.com/biillustrationnn/",
     linkLabel: "@biillustrationnn",
     photo: "/images/community-abigail-art.png",
